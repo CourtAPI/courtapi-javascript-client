@@ -50,20 +50,20 @@
   }
 
   describe('CaseLookupApi', function() {
-    describe('casesPacerSearchCaseNoCaseNumberGet', function() {
-      it('should call casesPacerSearchCaseNoCaseNumberGet successfully', function(done) {
-        //uncomment below and update the code to test casesPacerSearchCaseNoCaseNumberGet
-        //instance.casesPacerSearchCaseNoCaseNumberGet(function(error) {
+    describe('searchByCaseNumber', function() {
+      it('should call searchByCaseNumber successfully', function(done) {
+        //uncomment below and update the code to test searchByCaseNumber
+        //instance.searchByCaseNumber(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('casesPacerSearchPartyTitleGet', function() {
-      it('should call casesPacerSearchPartyTitleGet successfully', function(done) {
-        //uncomment below and update the code to test casesPacerSearchPartyTitleGet
-        //instance.casesPacerSearchPartyTitleGet(function(error) {
+    describe('searchByPartyTitle', function() {
+      it('should call searchByPartyTitle successfully', function(done) {
+        //uncomment below and update the code to test searchByPartyTitle
+        //instance.searchByPartyTitle(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

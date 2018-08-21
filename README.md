@@ -116,85 +116,85 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.casesPacerCourtCodeCaseNumberAliasGet(courtCode, caseNumber, callback);
+api.getAssociatedCases(courtCode, caseNumber, callback);
 
 ```
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://v1.courtapi.com*
+All URIs are relative to *https://train.v1.courtapi.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CourtApi.CaseApi* | [**casesPacerCourtCodeCaseNumberAliasGet**](docs/CaseApi.md#casesPacerCourtCodeCaseNumberAliasGet) | **GET** /cases/pacer/{court_code}/{case_number}/alias | Parties with alias for case
-*CourtApi.CaseApi* | [**casesPacerCourtCodeCaseNumberAssociatedCasesGet**](docs/CaseApi.md#casesPacerCourtCodeCaseNumberAssociatedCasesGet) | **GET** /cases/pacer/{court_code}/{case_number}/associated_cases | Cases related to the case or lead case
-*CourtApi.CaseApi* | [**casesPacerCourtCodeCaseNumberAttorneysGet**](docs/CaseApi.md#casesPacerCourtCodeCaseNumberAttorneysGet) | **GET** /cases/pacer/{court_code}/{case_number}/attorneys | Attorney personal info as well as the party(s) they represent
-*CourtApi.CaseApi* | [**casesPacerCourtCodeCaseNumberCaseSummaryGet**](docs/CaseApi.md#casesPacerCourtCodeCaseNumberCaseSummaryGet) | **GET** /cases/pacer/{court_code}/{case_number}/case_summary | Case summary for case
-*CourtApi.CaseApi* | [**casesPacerCourtCodeCaseNumberCreditorMailingGet**](docs/CaseApi.md#casesPacerCourtCodeCaseNumberCreditorMailingGet) | **GET** /cases/pacer/{court_code}/{case_number}/creditor_mailing | Creditor mailing matrix for case
-*CourtApi.CaseApi* | [**casesPacerCourtCodeCaseNumberCreditorsGet**](docs/CaseApi.md#casesPacerCourtCodeCaseNumberCreditorsGet) | **GET** /cases/pacer/{court_code}/{case_number}/creditors | All creditors for case
-*CourtApi.CaseApi* | [**casesPacerCourtCodeCaseNumberFilersGet**](docs/CaseApi.md#casesPacerCourtCodeCaseNumberFilersGet) | **GET** /cases/pacer/{court_code}/{case_number}/filers | All filers for case
-*CourtApi.CaseApi* | [**casesPacerCourtCodeCaseNumberMenuGet**](docs/CaseApi.md#casesPacerCourtCodeCaseNumberMenuGet) | **GET** /cases/pacer/{court_code}/{case_number}/menu | Available menus in PACER for case
-*CourtApi.CaseApi* | [**casesPacerCourtCodeCaseNumberNoticeGet**](docs/CaseApi.md#casesPacerCourtCodeCaseNumberNoticeGet) | **GET** /cases/pacer/{court_code}/{case_number}/notice | Case Notice of Bankruptcy Filings
-*CourtApi.CaseApi* | [**casesPacerCourtCodeCaseNumberPartiesGet**](docs/CaseApi.md#casesPacerCourtCodeCaseNumberPartiesGet) | **GET** /cases/pacer/{court_code}/{case_number}/parties | All parties for case
-*CourtApi.CaseApi* | [**casesPacerCourtCodeCaseNumberScheduleGet**](docs/CaseApi.md#casesPacerCourtCodeCaseNumberScheduleGet) | **GET** /cases/pacer/{court_code}/{case_number}/schedule | Schedule for case
-*CourtApi.CaseApi* | [**casesPacerCourtCodeCaseNumberStatusPendingGet**](docs/CaseApi.md#casesPacerCourtCodeCaseNumberStatusPendingGet) | **GET** /cases/pacer/{court_code}/{case_number}/status_pending | Pending status for case
-*CourtApi.CaseApi* | [**casesPacerCourtCodeCaseNumberTrusteesGet**](docs/CaseApi.md#casesPacerCourtCodeCaseNumberTrusteesGet) | **GET** /cases/pacer/{court_code}/{case_number}/trustees | Trustees for case
+*CourtApi.CaseApi* | [**getAssociatedCases**](docs/CaseApi.md#getAssociatedCases) | **GET** /cases/pacer/{court_code}/{case_number}/associated_cases | Cases related to the case or lead case
+*CourtApi.CaseApi* | [**getAttorneys**](docs/CaseApi.md#getAttorneys) | **GET** /cases/pacer/{court_code}/{case_number}/attorneys | Attorney personal info as well as the party(s) they represent
 *CourtApi.CaseApi* | [**getCaseMenu**](docs/CaseApi.md#getCaseMenu) | **GET** /cases/pacer/{court_code}/{case_number} | Case Root Menu
 *CourtApi.CaseApi* | [**getClaim**](docs/CaseApi.md#getClaim) | **GET** /cases/pacer/{court_code}/{case_number}/claims/{claim_no} | Case Claim Entry
 *CourtApi.CaseApi* | [**getClaimDocument**](docs/CaseApi.md#getClaimDocument) | **GET** /cases/pacer/{court_code}/{case_number}/claims/{claim_no}/documents/{claim_seq_no}/{part_no} | ClaimSelect Order PDF
 *CourtApi.CaseApi* | [**getClaimParts**](docs/CaseApi.md#getClaimParts) | **GET** /cases/pacer/{court_code}/{case_number}/claims/{claim_no}/documents/{claim_seq_no} | Claim Entry Document Parts
 *CourtApi.CaseApi* | [**getClaims**](docs/CaseApi.md#getClaims) | **GET** /cases/pacer/{court_code}/{case_number}/claims | Case Claims from Local DB
 *CourtApi.CaseApi* | [**getClaimsHeader**](docs/CaseApi.md#getClaimsHeader) | **GET** /cases/pacer/{court_code}/{case_number}/claims/header | Case Claims Header
+*CourtApi.CaseApi* | [**getCreditorMailingMatrix**](docs/CaseApi.md#getCreditorMailingMatrix) | **GET** /cases/pacer/{court_code}/{case_number}/creditor_mailing | Creditor mailing matrix for case
+*CourtApi.CaseApi* | [**getCreditors**](docs/CaseApi.md#getCreditors) | **GET** /cases/pacer/{court_code}/{case_number}/creditors | All creditors for case
 *CourtApi.CaseApi* | [**getDocketDocument**](docs/CaseApi.md#getDocketDocument) | **GET** /cases/pacer/{court_code}/{case_number}/dockets/{docket_no}/documents/{part_no} | DocketSelect Order PDF
 *CourtApi.CaseApi* | [**getDocketDocuments**](docs/CaseApi.md#getDocketDocuments) | **GET** /cases/pacer/{court_code}/{case_number}/dockets/{docket_no}/documents | DocumentSelect Documents
 *CourtApi.CaseApi* | [**getDocketEntry**](docs/CaseApi.md#getDocketEntry) | **GET** /cases/pacer/{court_code}/{case_number}/dockets/{docket_no} | Case Dockets Entry
 *CourtApi.CaseApi* | [**getDocketHeader**](docs/CaseApi.md#getDocketHeader) | **GET** /cases/pacer/{court_code}/{case_number}/dockets/header | Case Dockets Header
 *CourtApi.CaseApi* | [**getDockets**](docs/CaseApi.md#getDockets) | **GET** /cases/pacer/{court_code}/{case_number}/dockets | Case Dockets from Local DB
+*CourtApi.CaseApi* | [**getFilers**](docs/CaseApi.md#getFilers) | **GET** /cases/pacer/{court_code}/{case_number}/filers | All filers for case
 *CourtApi.CaseApi* | [**getHeaders**](docs/CaseApi.md#getHeaders) | **GET** /cases/pacer/{court_code}/{case_number}/headers | Case Headers
-*CourtApi.CaseLookupApi* | [**casesPacerSearchCaseNoCaseNumberGet**](docs/CaseLookupApi.md#casesPacerSearchCaseNoCaseNumberGet) | **GET** /cases/pacer/search/case_no/{case_number} | Case Search by Case Number
-*CourtApi.CaseLookupApi* | [**casesPacerSearchPartyTitleGet**](docs/CaseLookupApi.md#casesPacerSearchPartyTitleGet) | **GET** /cases/pacer/search/party_title | Case Search by Case Title or Party Name
+*CourtApi.CaseApi* | [**getMenu**](docs/CaseApi.md#getMenu) | **GET** /cases/pacer/{court_code}/{case_number}/menu | Available menus in PACER for case
+*CourtApi.CaseApi* | [**getNotice**](docs/CaseApi.md#getNotice) | **GET** /cases/pacer/{court_code}/{case_number}/notice | Case Notice of Bankruptcy Filings
+*CourtApi.CaseApi* | [**getParties**](docs/CaseApi.md#getParties) | **GET** /cases/pacer/{court_code}/{case_number}/parties | All parties for case
+*CourtApi.CaseApi* | [**getPartyAliases**](docs/CaseApi.md#getPartyAliases) | **GET** /cases/pacer/{court_code}/{case_number}/alias | Parties with alias for case
+*CourtApi.CaseApi* | [**getPendingStatus**](docs/CaseApi.md#getPendingStatus) | **GET** /cases/pacer/{court_code}/{case_number}/status_pending | Pending status for case
+*CourtApi.CaseApi* | [**getSchedule**](docs/CaseApi.md#getSchedule) | **GET** /cases/pacer/{court_code}/{case_number}/schedule | Schedule for case
+*CourtApi.CaseApi* | [**getSummary**](docs/CaseApi.md#getSummary) | **GET** /cases/pacer/{court_code}/{case_number}/case_summary | Case summary for case
+*CourtApi.CaseApi* | [**getTrustees**](docs/CaseApi.md#getTrustees) | **GET** /cases/pacer/{court_code}/{case_number}/trustees | Trustees for case
+*CourtApi.CaseLookupApi* | [**searchByCaseNumber**](docs/CaseLookupApi.md#searchByCaseNumber) | **GET** /cases/pacer/search/case_no/{case_number} | Case Search by Case Number
+*CourtApi.CaseLookupApi* | [**searchByPartyTitle**](docs/CaseLookupApi.md#searchByPartyTitle) | **GET** /cases/pacer/search/party_title | Case Search by Case Title or Party Name
 *CourtApi.CourtsApi* | [**getCourtDetails**](docs/CourtsApi.md#getCourtDetails) | **GET** /courts/pacer/{court_code} | PACER Court Details
 *CourtApi.CourtsApi* | [**getCourts**](docs/CourtsApi.md#getCourts) | **GET** /courts/pacer | All PACER Courts
-*CourtApi.NclApi* | [**pacerNclAppellatePost**](docs/NclApi.md#pacerNclAppellatePost) | **POST** /pacer/ncl/appellate | PACER NCL Appellate Case Search
-*CourtApi.NclApi* | [**pacerNclAppellateSearchIdGet**](docs/NclApi.md#pacerNclAppellateSearchIdGet) | **GET** /pacer/ncl/appellate/{search_id} | PACER NCL Appellate Case Search Result Navigation
-*CourtApi.NclApi* | [**pacerNclBankruptcyPost**](docs/NclApi.md#pacerNclBankruptcyPost) | **POST** /pacer/ncl/bankruptcy | PACER NCL Bankruptcy Case Search
-*CourtApi.NclApi* | [**pacerNclBankruptcySearchIdGet**](docs/NclApi.md#pacerNclBankruptcySearchIdGet) | **GET** /pacer/ncl/bankruptcy/{search_id} | PACER NCL Bankruptcy Case Search Result Navigation
-*CourtApi.NclApi* | [**pacerNclCivilPost**](docs/NclApi.md#pacerNclCivilPost) | **POST** /pacer/ncl/civil | PACER NCL Civil Case Search
-*CourtApi.NclApi* | [**pacerNclCivilSearchIdGet**](docs/NclApi.md#pacerNclCivilSearchIdGet) | **GET** /pacer/ncl/civil/{search_id} | PACER NCL Civil Case Search Result Navigation
-*CourtApi.NclApi* | [**pacerNclCriminalPost**](docs/NclApi.md#pacerNclCriminalPost) | **POST** /pacer/ncl/criminal | PACER NCL Criminal Case Search
-*CourtApi.NclApi* | [**pacerNclCriminalSearchIdGet**](docs/NclApi.md#pacerNclCriminalSearchIdGet) | **GET** /pacer/ncl/criminal/{search_id} | PACER NCL Criminal Case Search Result Navigation
-*CourtApi.NclApi* | [**pacerNclMdlPost**](docs/NclApi.md#pacerNclMdlPost) | **POST** /pacer/ncl/mdl | PACER NCL MDL Case Search
-*CourtApi.NclApi* | [**pacerNclMdlSearchIdGet**](docs/NclApi.md#pacerNclMdlSearchIdGet) | **GET** /pacer/ncl/mdl/{search_id} | PACER NCL MDL Case Search Result Navigation
-*CourtApi.PacerCaseLookupApi* | [**bankruptcyCaseReport**](docs/PacerCaseLookupApi.md#bankruptcyCaseReport) | **POST** /courts/pacer/{court_code}/cases/report/bankruptcy | Local Court Bankruptcy Cases Report
-*CourtApi.PacerCaseLookupApi* | [**courtsPacerCourtCodeCasesReportCivilPost**](docs/PacerCaseLookupApi.md#courtsPacerCourtCodeCasesReportCivilPost) | **POST** /courts/pacer/{court_code}/cases/report/civil | Local Court Civil Cases Report
-*CourtApi.PacerCaseLookupApi* | [**courtsPacerCourtCodeCasesReportCriminalPost**](docs/PacerCaseLookupApi.md#courtsPacerCourtCodeCasesReportCriminalPost) | **POST** /courts/pacer/{court_code}/cases/report/criminal | Local Court Criminal Cases Report
+*CourtApi.NclApi* | [**getAppellateSearchResults**](docs/NclApi.md#getAppellateSearchResults) | **GET** /pacer/ncl/appellate/{search_id} | PACER NCL Appellate Case Search Result Navigation
+*CourtApi.NclApi* | [**getBankruptcySearchResults**](docs/NclApi.md#getBankruptcySearchResults) | **GET** /pacer/ncl/bankruptcy/{search_id} | PACER NCL Bankruptcy Case Search Result Navigation
+*CourtApi.NclApi* | [**getCivilSearchResults**](docs/NclApi.md#getCivilSearchResults) | **GET** /pacer/ncl/civil/{search_id} | PACER NCL Civil Case Search Result Navigation
+*CourtApi.NclApi* | [**getCriminalSearchResults**](docs/NclApi.md#getCriminalSearchResults) | **GET** /pacer/ncl/criminal/{search_id} | PACER NCL Criminal Case Search Result Navigation
+*CourtApi.NclApi* | [**getMDLSearchResults**](docs/NclApi.md#getMDLSearchResults) | **GET** /pacer/ncl/mdl/{search_id} | PACER NCL MDL Case Search Result Navigation
+*CourtApi.NclApi* | [**searchAppellateCases**](docs/NclApi.md#searchAppellateCases) | **POST** /pacer/ncl/appellate | PACER NCL Appellate Case Search
+*CourtApi.NclApi* | [**searchBankruptcyCases**](docs/NclApi.md#searchBankruptcyCases) | **POST** /pacer/ncl/bankruptcy | PACER NCL Bankruptcy Case Search
+*CourtApi.NclApi* | [**searchCivilCases**](docs/NclApi.md#searchCivilCases) | **POST** /pacer/ncl/civil | PACER NCL Civil Case Search
+*CourtApi.NclApi* | [**searchCriminalCases**](docs/NclApi.md#searchCriminalCases) | **POST** /pacer/ncl/criminal | PACER NCL Criminal Case Search
+*CourtApi.NclApi* | [**searchMDLCases**](docs/NclApi.md#searchMDLCases) | **POST** /pacer/ncl/mdl | PACER NCL MDL Case Search
+*CourtApi.PacerCaseLookupApi* | [**searchBankruptcyCases**](docs/PacerCaseLookupApi.md#searchBankruptcyCases) | **POST** /courts/pacer/{court_code}/cases/report/bankruptcy | Local Court Bankruptcy Cases Report
+*CourtApi.PacerCaseLookupApi* | [**searchCivilCases**](docs/PacerCaseLookupApi.md#searchCivilCases) | **POST** /courts/pacer/{court_code}/cases/report/civil | Local Court Civil Cases Report
 *CourtApi.PacerCaseLookupApi* | [**searchCourtCases**](docs/PacerCaseLookupApi.md#searchCourtCases) | **POST** /courts/pacer/{court_code}/cases/search | Local Court Case Search
+*CourtApi.PacerCaseLookupApi* | [**searchCriminalCases**](docs/PacerCaseLookupApi.md#searchCriminalCases) | **POST** /courts/pacer/{court_code}/cases/report/criminal | Local Court Criminal Cases Report
+*CourtApi.PacerCredentialsApi* | [**checkPacerCredentials**](docs/PacerCredentialsApi.md#checkPacerCredentials) | **POST** /pacer/credentials/validate | Validate Credentials
 *CourtApi.PacerCredentialsApi* | [**deleteCredentials**](docs/PacerCredentialsApi.md#deleteCredentials) | **DELETE** /pacer/credentials | Delete Credentials
 *CourtApi.PacerCredentialsApi* | [**getCredentials**](docs/PacerCredentialsApi.md#getCredentials) | **GET** /pacer/credentials | Get Credentials
 *CourtApi.PacerCredentialsApi* | [**saveCredentials**](docs/PacerCredentialsApi.md#saveCredentials) | **POST** /pacer/credentials | Create/Update Credentials
-*CourtApi.PacerCredentialsApi* | [**validatePacerCredentials**](docs/PacerCredentialsApi.md#validatePacerCredentials) | **POST** /pacer/credentials/validate | Validate Credentials
 *CourtApi.QueryApi* | [**buyClaimDocument**](docs/QueryApi.md#buyClaimDocument) | **POST** /cases/pacer/{court_code}/{case_number}/claims/{claim_no}/documents/{claim_seq_no}/{part_no} | Purchase Claim Entry Document from PACER
 *CourtApi.QueryApi* | [**buyDocketDocument**](docs/QueryApi.md#buyDocketDocument) | **POST** /cases/pacer/{court_code}/{case_number}/dockets/{docket_no}/documents/{part_no} | DocketSelect Order PDF
-*CourtApi.QueryApi* | [**casesPacerCourtCodeCaseNumberAliasPost**](docs/QueryApi.md#casesPacerCourtCodeCaseNumberAliasPost) | **POST** /cases/pacer/{court_code}/{case_number}/alias | PACER Query Case Alias
-*CourtApi.QueryApi* | [**casesPacerCourtCodeCaseNumberAssociatedCasesPost**](docs/QueryApi.md#casesPacerCourtCodeCaseNumberAssociatedCasesPost) | **POST** /cases/pacer/{court_code}/{case_number}/associated_cases | PACER Query Case Associated Cases
-*CourtApi.QueryApi* | [**casesPacerCourtCodeCaseNumberAttorneysPost**](docs/QueryApi.md#casesPacerCourtCodeCaseNumberAttorneysPost) | **POST** /cases/pacer/{court_code}/{case_number}/attorneys | PACER Query Case Attorneys
-*CourtApi.QueryApi* | [**casesPacerCourtCodeCaseNumberCaseFileLocationPost**](docs/QueryApi.md#casesPacerCourtCodeCaseNumberCaseFileLocationPost) | **POST** /cases/pacer/{court_code}/{case_number}/case_file_location | PACER Query Case File Location
-*CourtApi.QueryApi* | [**casesPacerCourtCodeCaseNumberCaseSummaryPost**](docs/QueryApi.md#casesPacerCourtCodeCaseNumberCaseSummaryPost) | **POST** /cases/pacer/{court_code}/{case_number}/case_summary | PACER Query Case Summary
-*CourtApi.QueryApi* | [**casesPacerCourtCodeCaseNumberCreditorMailingPost**](docs/QueryApi.md#casesPacerCourtCodeCaseNumberCreditorMailingPost) | **POST** /cases/pacer/{court_code}/{case_number}/creditor_mailing | PACER Query Case Creditor Mailing
-*CourtApi.QueryApi* | [**casesPacerCourtCodeCaseNumberCreditorsPost**](docs/QueryApi.md#casesPacerCourtCodeCaseNumberCreditorsPost) | **POST** /cases/pacer/{court_code}/{case_number}/creditors | PACER Query Case Creditors
-*CourtApi.QueryApi* | [**casesPacerCourtCodeCaseNumberFilersPost**](docs/QueryApi.md#casesPacerCourtCodeCaseNumberFilersPost) | **POST** /cases/pacer/{court_code}/{case_number}/filers | PACER Query Case Filers
-*CourtApi.QueryApi* | [**casesPacerCourtCodeCaseNumberHistoryPost**](docs/QueryApi.md#casesPacerCourtCodeCaseNumberHistoryPost) | **POST** /cases/pacer/{court_code}/{case_number}/history | PACER Query Case History
-*CourtApi.QueryApi* | [**casesPacerCourtCodeCaseNumberMenuPost**](docs/QueryApi.md#casesPacerCourtCodeCaseNumberMenuPost) | **POST** /cases/pacer/{court_code}/{case_number}/menu | PACER Query Case Menu
-*CourtApi.QueryApi* | [**casesPacerCourtCodeCaseNumberNoticePost**](docs/QueryApi.md#casesPacerCourtCodeCaseNumberNoticePost) | **POST** /cases/pacer/{court_code}/{case_number}/notice | PACER Query Case Notice
-*CourtApi.QueryApi* | [**casesPacerCourtCodeCaseNumberPartiesPost**](docs/QueryApi.md#casesPacerCourtCodeCaseNumberPartiesPost) | **POST** /cases/pacer/{court_code}/{case_number}/parties | PACER Query Case Parties
-*CourtApi.QueryApi* | [**casesPacerCourtCodeCaseNumberRelatedTransactionsPost**](docs/QueryApi.md#casesPacerCourtCodeCaseNumberRelatedTransactionsPost) | **POST** /cases/pacer/{court_code}/{case_number}/related_transactions | PACER Query Case Related Transactions
-*CourtApi.QueryApi* | [**casesPacerCourtCodeCaseNumberSchedulePost**](docs/QueryApi.md#casesPacerCourtCodeCaseNumberSchedulePost) | **POST** /cases/pacer/{court_code}/{case_number}/schedule | PACER Query Case Schedule
-*CourtApi.QueryApi* | [**casesPacerCourtCodeCaseNumberStatusPendingPost**](docs/QueryApi.md#casesPacerCourtCodeCaseNumberStatusPendingPost) | **POST** /cases/pacer/{court_code}/{case_number}/status_pending | PACER Query Case Status Pending
-*CourtApi.QueryApi* | [**casesPacerCourtCodeCaseNumberTrusteesPost**](docs/QueryApi.md#casesPacerCourtCodeCaseNumberTrusteesPost) | **POST** /cases/pacer/{court_code}/{case_number}/trustees | PACER Query Case Trustees
+*CourtApi.QueryApi* | [**updateAssociatedCases**](docs/QueryApi.md#updateAssociatedCases) | **POST** /cases/pacer/{court_code}/{case_number}/associated_cases | PACER Query Case Associated Cases
+*CourtApi.QueryApi* | [**updateAttorneys**](docs/QueryApi.md#updateAttorneys) | **POST** /cases/pacer/{court_code}/{case_number}/attorneys | PACER Query Case Attorneys
+*CourtApi.QueryApi* | [**updateCaseFileLocation**](docs/QueryApi.md#updateCaseFileLocation) | **POST** /cases/pacer/{court_code}/{case_number}/case_file_location | PACER Query Case File Location
+*CourtApi.QueryApi* | [**updateCaseSummary**](docs/QueryApi.md#updateCaseSummary) | **POST** /cases/pacer/{court_code}/{case_number}/case_summary | PACER Query Case Summary
 *CourtApi.QueryApi* | [**updateClaimParts**](docs/QueryApi.md#updateClaimParts) | **POST** /cases/pacer/{court_code}/{case_number}/claims/{claim_no}/documents/{claim_seq_no} | Purchase Claim Entry Document Parts from PACER
 *CourtApi.QueryApi* | [**updateClaims**](docs/QueryApi.md#updateClaims) | **POST** /cases/pacer/{court_code}/{case_number}/claims/update | PACER Query Case Claims
+*CourtApi.QueryApi* | [**updateCreditorMailingMatrix**](docs/QueryApi.md#updateCreditorMailingMatrix) | **POST** /cases/pacer/{court_code}/{case_number}/creditor_mailing | PACER Query Case Creditor Mailing
+*CourtApi.QueryApi* | [**updateCreditors**](docs/QueryApi.md#updateCreditors) | **POST** /cases/pacer/{court_code}/{case_number}/creditors | PACER Query Case Creditors
 *CourtApi.QueryApi* | [**updateDocketDocuments**](docs/QueryApi.md#updateDocketDocuments) | **POST** /cases/pacer/{court_code}/{case_number}/dockets/{docket_no}/documents | DocumentSelect Documents
 *CourtApi.QueryApi* | [**updateDockets**](docs/QueryApi.md#updateDockets) | **POST** /cases/pacer/{court_code}/{case_number}/dockets/update | PACER Query Case Dockets
+*CourtApi.QueryApi* | [**updateFilers**](docs/QueryApi.md#updateFilers) | **POST** /cases/pacer/{court_code}/{case_number}/filers | PACER Query Case Filers
+*CourtApi.QueryApi* | [**updateHistory**](docs/QueryApi.md#updateHistory) | **POST** /cases/pacer/{court_code}/{case_number}/history | PACER Query Case History
+*CourtApi.QueryApi* | [**updateMenu**](docs/QueryApi.md#updateMenu) | **POST** /cases/pacer/{court_code}/{case_number}/menu | PACER Query Case Menu
+*CourtApi.QueryApi* | [**updateNotice**](docs/QueryApi.md#updateNotice) | **POST** /cases/pacer/{court_code}/{case_number}/notice | PACER Query Case Notice
+*CourtApi.QueryApi* | [**updateParties**](docs/QueryApi.md#updateParties) | **POST** /cases/pacer/{court_code}/{case_number}/parties | PACER Query Case Parties
+*CourtApi.QueryApi* | [**updatePartyAliases**](docs/QueryApi.md#updatePartyAliases) | **POST** /cases/pacer/{court_code}/{case_number}/alias | PACER Query Case Alias
+*CourtApi.QueryApi* | [**updatePendingStatus**](docs/QueryApi.md#updatePendingStatus) | **POST** /cases/pacer/{court_code}/{case_number}/status_pending | PACER Query Case Status Pending
+*CourtApi.QueryApi* | [**updateRelatedTransactions**](docs/QueryApi.md#updateRelatedTransactions) | **POST** /cases/pacer/{court_code}/{case_number}/related_transactions | PACER Query Case Related Transactions
+*CourtApi.QueryApi* | [**updateSchedule**](docs/QueryApi.md#updateSchedule) | **POST** /cases/pacer/{court_code}/{case_number}/schedule | PACER Query Case Schedule
+*CourtApi.QueryApi* | [**updateTrustees**](docs/QueryApi.md#updateTrustees) | **POST** /cases/pacer/{court_code}/{case_number}/trustees | PACER Query Case Trustees
 
 
 ## Documentation for Models

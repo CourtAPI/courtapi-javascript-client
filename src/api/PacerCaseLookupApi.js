@@ -48,8 +48,8 @@
 
 
     /**
-     * Callback function to receive the result of the bankruptcyCaseReport operation.
-     * @callback module:api/PacerCaseLookupApi~bankruptcyCaseReportCallback
+     * Callback function to receive the result of the searchBankruptcyCases operation.
+     * @callback module:api/PacerCaseLookupApi~searchBankruptcyCasesCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -77,15 +77,15 @@
      * @param {Boolean} opts.smallbusiness Small Business Cases
      * @param {Boolean} opts.proseonly Pro se cases only
      * @param {String} opts.maxCostCents Max Cost Cents
-     * @param {module:api/PacerCaseLookupApi~bankruptcyCaseReportCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/PacerCaseLookupApi~searchBankruptcyCasesCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.bankruptcyCaseReport = function(courtCode, opts, callback) {
+    this.searchBankruptcyCases = function(courtCode, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'courtCode' is set
       if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling bankruptcyCaseReport");
+        throw new Error("Missing the required parameter 'courtCode' when calling searchBankruptcyCases");
       }
 
 
@@ -131,8 +131,8 @@
     }
 
     /**
-     * Callback function to receive the result of the courtsPacerCourtCodeCasesReportCivilPost operation.
-     * @callback module:api/PacerCaseLookupApi~courtsPacerCourtCodeCasesReportCivilPostCallback
+     * Callback function to receive the result of the searchCivilCases operation.
+     * @callback module:api/PacerCaseLookupApi~searchCivilCasesCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -155,15 +155,15 @@
      * @param {String} opts.dateFrom Date From
      * @param {String} opts.dateTo Date To
      * @param {String} opts.maxCostCents Max Cost Cents
-     * @param {module:api/PacerCaseLookupApi~courtsPacerCourtCodeCasesReportCivilPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/PacerCaseLookupApi~searchCivilCasesCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.courtsPacerCourtCodeCasesReportCivilPost = function(courtCode, opts, callback) {
+    this.searchCivilCases = function(courtCode, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'courtCode' is set
       if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling courtsPacerCourtCodeCasesReportCivilPost");
+        throw new Error("Missing the required parameter 'courtCode' when calling searchCivilCases");
       }
 
 
@@ -198,79 +198,6 @@
 
       return this.apiClient.callApi(
         '/courts/pacer/{court_code}/cases/report/civil', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the courtsPacerCourtCodeCasesReportCriminalPost operation.
-     * @callback module:api/PacerCaseLookupApi~courtsPacerCourtCodeCasesReportCriminalPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Local Court Criminal Cases Report
-     * Local Court Criminal Cases Report
-     * @param {String} courtCode Court Code
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.office Office
-     * @param {module:model/String} opts.caseType Case Type
-     * @param {String} opts.caseFlags Case flags
-     * @param {String} opts.citation Citation
-     * @param {Boolean} opts.pendingCitations Pending Citations
-     * @param {Boolean} opts.terminatedCitations Disposed Citations
-     * @param {String} opts.dateFrom Date From
-     * @param {String} opts.dateTo Date To
-     * @param {Number} opts.terminalDigit Terminal digit(s)
-     * @param {Boolean} opts.pendingDefendants Pending defendants
-     * @param {Boolean} opts.terminatedDefendants Terminated defendants
-     * @param {String} opts.maxCostCents Max Cost Cents
-     * @param {module:api/PacerCaseLookupApi~courtsPacerCourtCodeCasesReportCriminalPostCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.courtsPacerCourtCodeCasesReportCriminalPost = function(courtCode, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling courtsPacerCourtCodeCasesReportCriminalPost");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-        'office': opts['office'],
-        'case_type': opts['caseType'],
-        'case_flags': opts['caseFlags'],
-        'citation': opts['citation'],
-        'pending_citations': opts['pendingCitations'],
-        'terminated_citations': opts['terminatedCitations'],
-        'date_from': opts['dateFrom'],
-        'date_to': opts['dateTo'],
-        'terminal_digit': opts['terminalDigit'],
-        'pending_defendants': opts['pendingDefendants'],
-        'terminated_defendants': opts['terminatedDefendants'],
-        'max_cost_cents': opts['maxCostCents']
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = ['application/x-www-form-urlencoded'];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/courts/pacer/{court_code}/cases/report/criminal', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -354,6 +281,79 @@
 
       return this.apiClient.callApi(
         '/courts/pacer/{court_code}/cases/search', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the searchCriminalCases operation.
+     * @callback module:api/PacerCaseLookupApi~searchCriminalCasesCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Local Court Criminal Cases Report
+     * Local Court Criminal Cases Report
+     * @param {String} courtCode Court Code
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.office Office
+     * @param {module:model/String} opts.caseType Case Type
+     * @param {String} opts.caseFlags Case flags
+     * @param {String} opts.citation Citation
+     * @param {Boolean} opts.pendingCitations Pending Citations
+     * @param {Boolean} opts.terminatedCitations Disposed Citations
+     * @param {String} opts.dateFrom Date From
+     * @param {String} opts.dateTo Date To
+     * @param {Number} opts.terminalDigit Terminal digit(s)
+     * @param {Boolean} opts.pendingDefendants Pending defendants
+     * @param {Boolean} opts.terminatedDefendants Terminated defendants
+     * @param {String} opts.maxCostCents Max Cost Cents
+     * @param {module:api/PacerCaseLookupApi~searchCriminalCasesCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.searchCriminalCases = function(courtCode, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling searchCriminalCases");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'office': opts['office'],
+        'case_type': opts['caseType'],
+        'case_flags': opts['caseFlags'],
+        'citation': opts['citation'],
+        'pending_citations': opts['pendingCitations'],
+        'terminated_citations': opts['terminatedCitations'],
+        'date_from': opts['dateFrom'],
+        'date_to': opts['dateTo'],
+        'terminal_digit': opts['terminalDigit'],
+        'pending_defendants': opts['pendingDefendants'],
+        'terminated_defendants': opts['terminatedDefendants'],
+        'max_cost_cents': opts['maxCostCents']
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = ['application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/courts/pacer/{court_code}/cases/report/criminal', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

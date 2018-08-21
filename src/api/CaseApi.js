@@ -48,62 +48,8 @@
 
 
     /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberAliasGet operation.
-     * @callback module:api/CaseApi~casesPacerCourtCodeCaseNumberAliasGetCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Parties with alias for case
-     * Parties with alias for case
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {module:api/CaseApi~casesPacerCourtCodeCaseNumberAliasGetCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.casesPacerCourtCodeCaseNumberAliasGet = function(courtCode, caseNumber, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberAliasGet");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberAliasGet");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = [];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/alias', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberAssociatedCasesGet operation.
-     * @callback module:api/CaseApi~casesPacerCourtCodeCaseNumberAssociatedCasesGetCallback
+     * Callback function to receive the result of the getAssociatedCases operation.
+     * @callback module:api/CaseApi~getAssociatedCasesCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -114,19 +60,19 @@
      * Cases related to the case or lead case
      * @param {String} courtCode Court Code
      * @param {String} caseNumber Case Number
-     * @param {module:api/CaseApi~casesPacerCourtCodeCaseNumberAssociatedCasesGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CaseApi~getAssociatedCasesCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.casesPacerCourtCodeCaseNumberAssociatedCasesGet = function(courtCode, caseNumber, callback) {
+    this.getAssociatedCases = function(courtCode, caseNumber, callback) {
       var postBody = null;
 
       // verify the required parameter 'courtCode' is set
       if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberAssociatedCasesGet");
+        throw new Error("Missing the required parameter 'courtCode' when calling getAssociatedCases");
       }
 
       // verify the required parameter 'caseNumber' is set
       if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberAssociatedCasesGet");
+        throw new Error("Missing the required parameter 'caseNumber' when calling getAssociatedCases");
       }
 
 
@@ -156,8 +102,8 @@
     }
 
     /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberAttorneysGet operation.
-     * @callback module:api/CaseApi~casesPacerCourtCodeCaseNumberAttorneysGetCallback
+     * Callback function to receive the result of the getAttorneys operation.
+     * @callback module:api/CaseApi~getAttorneysCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -168,19 +114,19 @@
      * Attorney personal info as well as the party(s) they represent
      * @param {String} courtCode Court Code
      * @param {String} caseNumber Case Number
-     * @param {module:api/CaseApi~casesPacerCourtCodeCaseNumberAttorneysGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CaseApi~getAttorneysCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.casesPacerCourtCodeCaseNumberAttorneysGet = function(courtCode, caseNumber, callback) {
+    this.getAttorneys = function(courtCode, caseNumber, callback) {
       var postBody = null;
 
       // verify the required parameter 'courtCode' is set
       if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberAttorneysGet");
+        throw new Error("Missing the required parameter 'courtCode' when calling getAttorneys");
       }
 
       // verify the required parameter 'caseNumber' is set
       if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberAttorneysGet");
+        throw new Error("Missing the required parameter 'caseNumber' when calling getAttorneys");
       }
 
 
@@ -204,546 +150,6 @@
 
       return this.apiClient.callApi(
         '/cases/pacer/{court_code}/{case_number}/attorneys', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberCaseSummaryGet operation.
-     * @callback module:api/CaseApi~casesPacerCourtCodeCaseNumberCaseSummaryGetCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Case summary for case
-     * Case summary for case
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {module:api/CaseApi~casesPacerCourtCodeCaseNumberCaseSummaryGetCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.casesPacerCourtCodeCaseNumberCaseSummaryGet = function(courtCode, caseNumber, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberCaseSummaryGet");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberCaseSummaryGet");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = [];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/case_summary', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberCreditorMailingGet operation.
-     * @callback module:api/CaseApi~casesPacerCourtCodeCaseNumberCreditorMailingGetCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Creditor mailing matrix for case
-     * Creditor mailing matrix for case
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {module:api/CaseApi~casesPacerCourtCodeCaseNumberCreditorMailingGetCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.casesPacerCourtCodeCaseNumberCreditorMailingGet = function(courtCode, caseNumber, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberCreditorMailingGet");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberCreditorMailingGet");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = [];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/creditor_mailing', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberCreditorsGet operation.
-     * @callback module:api/CaseApi~casesPacerCourtCodeCaseNumberCreditorsGetCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * All creditors for case
-     * All creditors for case
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {module:api/CaseApi~casesPacerCourtCodeCaseNumberCreditorsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.casesPacerCourtCodeCaseNumberCreditorsGet = function(courtCode, caseNumber, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberCreditorsGet");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberCreditorsGet");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = [];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/creditors', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberFilersGet operation.
-     * @callback module:api/CaseApi~casesPacerCourtCodeCaseNumberFilersGetCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * All filers for case
-     * All filers for case
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {module:api/CaseApi~casesPacerCourtCodeCaseNumberFilersGetCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.casesPacerCourtCodeCaseNumberFilersGet = function(courtCode, caseNumber, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberFilersGet");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberFilersGet");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = [];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/filers', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberMenuGet operation.
-     * @callback module:api/CaseApi~casesPacerCourtCodeCaseNumberMenuGetCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Available menus in PACER for case
-     * Available menus in PACER for case
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {module:api/CaseApi~casesPacerCourtCodeCaseNumberMenuGetCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.casesPacerCourtCodeCaseNumberMenuGet = function(courtCode, caseNumber, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberMenuGet");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberMenuGet");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = [];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/menu', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberNoticeGet operation.
-     * @callback module:api/CaseApi~casesPacerCourtCodeCaseNumberNoticeGetCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Case Notice of Bankruptcy Filings
-     * Case Notice of Bankruptcy Filings
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {module:api/CaseApi~casesPacerCourtCodeCaseNumberNoticeGetCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.casesPacerCourtCodeCaseNumberNoticeGet = function(courtCode, caseNumber, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberNoticeGet");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberNoticeGet");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = [];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/notice', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberPartiesGet operation.
-     * @callback module:api/CaseApi~casesPacerCourtCodeCaseNumberPartiesGetCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * All parties for case
-     * All parties for case
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {module:api/CaseApi~casesPacerCourtCodeCaseNumberPartiesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.casesPacerCourtCodeCaseNumberPartiesGet = function(courtCode, caseNumber, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberPartiesGet");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberPartiesGet");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = [];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/parties', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberScheduleGet operation.
-     * @callback module:api/CaseApi~casesPacerCourtCodeCaseNumberScheduleGetCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Schedule for case
-     * Schedule for case
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {module:api/CaseApi~casesPacerCourtCodeCaseNumberScheduleGetCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.casesPacerCourtCodeCaseNumberScheduleGet = function(courtCode, caseNumber, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberScheduleGet");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberScheduleGet");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = [];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/schedule', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberStatusPendingGet operation.
-     * @callback module:api/CaseApi~casesPacerCourtCodeCaseNumberStatusPendingGetCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Pending status for case
-     * Pending status for case
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {module:api/CaseApi~casesPacerCourtCodeCaseNumberStatusPendingGetCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.casesPacerCourtCodeCaseNumberStatusPendingGet = function(courtCode, caseNumber, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberStatusPendingGet");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberStatusPendingGet");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = [];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/status_pending', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberTrusteesGet operation.
-     * @callback module:api/CaseApi~casesPacerCourtCodeCaseNumberTrusteesGetCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Trustees for case
-     * Trustees for case
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {module:api/CaseApi~casesPacerCourtCodeCaseNumberTrusteesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.casesPacerCourtCodeCaseNumberTrusteesGet = function(courtCode, caseNumber, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberTrusteesGet");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberTrusteesGet");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = [];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/trustees', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1139,6 +545,114 @@
     }
 
     /**
+     * Callback function to receive the result of the getCreditorMailingMatrix operation.
+     * @callback module:api/CaseApi~getCreditorMailingMatrixCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Creditor mailing matrix for case
+     * Creditor mailing matrix for case
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {module:api/CaseApi~getCreditorMailingMatrixCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.getCreditorMailingMatrix = function(courtCode, caseNumber, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling getCreditorMailingMatrix");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling getCreditorMailingMatrix");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/creditor_mailing', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCreditors operation.
+     * @callback module:api/CaseApi~getCreditorsCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * All creditors for case
+     * All creditors for case
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {module:api/CaseApi~getCreditorsCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.getCreditors = function(courtCode, caseNumber, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling getCreditors");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling getCreditors");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/creditors', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getDocketDocument operation.
      * @callback module:api/CaseApi~getDocketDocumentCallback
      * @param {String} error Error message, if any.
@@ -1460,6 +974,60 @@
     }
 
     /**
+     * Callback function to receive the result of the getFilers operation.
+     * @callback module:api/CaseApi~getFilersCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * All filers for case
+     * All filers for case
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {module:api/CaseApi~getFilersCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.getFilers = function(courtCode, caseNumber, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling getFilers");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling getFilers");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/filers', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getHeaders operation.
      * @callback module:api/CaseApi~getHeadersCallback
      * @param {String} error Error message, if any.
@@ -1508,6 +1076,438 @@
 
       return this.apiClient.callApi(
         '/cases/pacer/{court_code}/{case_number}/headers', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getMenu operation.
+     * @callback module:api/CaseApi~getMenuCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Available menus in PACER for case
+     * Available menus in PACER for case
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {module:api/CaseApi~getMenuCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.getMenu = function(courtCode, caseNumber, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling getMenu");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling getMenu");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/menu', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getNotice operation.
+     * @callback module:api/CaseApi~getNoticeCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Case Notice of Bankruptcy Filings
+     * Case Notice of Bankruptcy Filings
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {module:api/CaseApi~getNoticeCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.getNotice = function(courtCode, caseNumber, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling getNotice");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling getNotice");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/notice', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getParties operation.
+     * @callback module:api/CaseApi~getPartiesCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * All parties for case
+     * All parties for case
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {module:api/CaseApi~getPartiesCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.getParties = function(courtCode, caseNumber, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling getParties");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling getParties");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/parties', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getPartyAliases operation.
+     * @callback module:api/CaseApi~getPartyAliasesCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Parties with alias for case
+     * Parties with alias for case
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {module:api/CaseApi~getPartyAliasesCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.getPartyAliases = function(courtCode, caseNumber, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling getPartyAliases");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling getPartyAliases");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/alias', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getPendingStatus operation.
+     * @callback module:api/CaseApi~getPendingStatusCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Pending status for case
+     * Pending status for case
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {module:api/CaseApi~getPendingStatusCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.getPendingStatus = function(courtCode, caseNumber, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling getPendingStatus");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling getPendingStatus");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/status_pending', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSchedule operation.
+     * @callback module:api/CaseApi~getScheduleCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Schedule for case
+     * Schedule for case
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {module:api/CaseApi~getScheduleCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.getSchedule = function(courtCode, caseNumber, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling getSchedule");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling getSchedule");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/schedule', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSummary operation.
+     * @callback module:api/CaseApi~getSummaryCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Case summary for case
+     * Case summary for case
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {module:api/CaseApi~getSummaryCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.getSummary = function(courtCode, caseNumber, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling getSummary");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling getSummary");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/case_summary', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getTrustees operation.
+     * @callback module:api/CaseApi~getTrusteesCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Trustees for case
+     * Trustees for case
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {module:api/CaseApi~getTrusteesCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.getTrustees = function(courtCode, caseNumber, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling getTrustees");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling getTrustees");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/trustees', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -1,18 +1,18 @@
 # CourtApi.PacerCaseLookupApi
 
-All URIs are relative to *https://v1.courtapi.com*
+All URIs are relative to *https://train.v1.courtapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**bankruptcyCaseReport**](PacerCaseLookupApi.md#bankruptcyCaseReport) | **POST** /courts/pacer/{court_code}/cases/report/bankruptcy | Local Court Bankruptcy Cases Report
-[**courtsPacerCourtCodeCasesReportCivilPost**](PacerCaseLookupApi.md#courtsPacerCourtCodeCasesReportCivilPost) | **POST** /courts/pacer/{court_code}/cases/report/civil | Local Court Civil Cases Report
-[**courtsPacerCourtCodeCasesReportCriminalPost**](PacerCaseLookupApi.md#courtsPacerCourtCodeCasesReportCriminalPost) | **POST** /courts/pacer/{court_code}/cases/report/criminal | Local Court Criminal Cases Report
+[**searchBankruptcyCases**](PacerCaseLookupApi.md#searchBankruptcyCases) | **POST** /courts/pacer/{court_code}/cases/report/bankruptcy | Local Court Bankruptcy Cases Report
+[**searchCivilCases**](PacerCaseLookupApi.md#searchCivilCases) | **POST** /courts/pacer/{court_code}/cases/report/civil | Local Court Civil Cases Report
 [**searchCourtCases**](PacerCaseLookupApi.md#searchCourtCases) | **POST** /courts/pacer/{court_code}/cases/search | Local Court Case Search
+[**searchCriminalCases**](PacerCaseLookupApi.md#searchCriminalCases) | **POST** /courts/pacer/{court_code}/cases/report/criminal | Local Court Criminal Cases Report
 
 
-<a name="bankruptcyCaseReport"></a>
-# **bankruptcyCaseReport**
-> bankruptcyCaseReport(courtCode, opts)
+<a name="searchBankruptcyCases"></a>
+# **searchBankruptcyCases**
+> searchBankruptcyCases(courtCode, opts)
 
 Local Court Bankruptcy Cases Report
 
@@ -59,7 +59,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.bankruptcyCaseReport(courtCode, opts, callback);
+apiInstance.searchBankruptcyCases(courtCode, opts, callback);
 ```
 
 ### Parameters
@@ -98,9 +98,9 @@ null (empty response body)
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json, application/xml
 
-<a name="courtsPacerCourtCodeCasesReportCivilPost"></a>
-# **courtsPacerCourtCodeCasesReportCivilPost**
-> courtsPacerCourtCodeCasesReportCivilPost(courtCode, opts)
+<a name="searchCivilCases"></a>
+# **searchCivilCases**
+> searchCivilCases(courtCode, opts)
 
 Local Court Civil Cases Report
 
@@ -142,7 +142,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.courtsPacerCourtCodeCasesReportCivilPost(courtCode, opts, callback);
+apiInstance.searchCivilCases(courtCode, opts, callback);
 ```
 
 ### Parameters
@@ -161,84 +161,6 @@ Name | Type | Description  | Notes
  **closedCases** | **Boolean**| Closed cases | [optional] 
  **dateFrom** | **String**| Date From | [optional] 
  **dateTo** | **String**| Date To | [optional] 
- **maxCostCents** | **String**| Max Cost Cents | [optional] 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[www-authenticate](../README.md#www-authenticate)
-
-### HTTP request headers
-
- - **Content-Type**: application/x-www-form-urlencoded
- - **Accept**: application/json, application/xml
-
-<a name="courtsPacerCourtCodeCasesReportCriminalPost"></a>
-# **courtsPacerCourtCodeCasesReportCriminalPost**
-> courtsPacerCourtCodeCasesReportCriminalPost(courtCode, opts)
-
-Local Court Criminal Cases Report
-
-Local Court Criminal Cases Report
-
-### Example
-```javascript
-var CourtApi = require('court_api');
-var defaultClient = CourtApi.ApiClient.instance;
-
-// Configure HTTP basic authorization: www-authenticate
-var www-authenticate = defaultClient.authentications['www-authenticate'];
-www-authenticate.username = 'YOUR USERNAME';
-www-authenticate.password = 'YOUR PASSWORD';
-
-var apiInstance = new CourtApi.PacerCaseLookupApi();
-
-var courtCode = "courtCode_example"; // String | Court Code
-
-var opts = { 
-  'office': "office_example", // String | Office
-  'caseType': "caseType_example", // String | Case Type
-  'caseFlags': "caseFlags_example", // String | Case flags
-  'citation': "citation_example", // String | Citation
-  'pendingCitations': true, // Boolean | Pending Citations
-  'terminatedCitations': true, // Boolean | Disposed Citations
-  'dateFrom': "dateFrom_example", // String | Date From
-  'dateTo': "dateTo_example", // String | Date To
-  'terminalDigit': 56, // Number | Terminal digit(s)
-  'pendingDefendants': true, // Boolean | Pending defendants
-  'terminatedDefendants': true, // Boolean | Terminated defendants
-  'maxCostCents': "maxCostCents_example" // String | Max Cost Cents
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.courtsPacerCourtCodeCasesReportCriminalPost(courtCode, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **courtCode** | **String**| Court Code | 
- **office** | **String**| Office | [optional] 
- **caseType** | **String**| Case Type | [optional] 
- **caseFlags** | **String**| Case flags | [optional] 
- **citation** | **String**| Citation | [optional] 
- **pendingCitations** | **Boolean**| Pending Citations | [optional] 
- **terminatedCitations** | **Boolean**| Disposed Citations | [optional] 
- **dateFrom** | **String**| Date From | [optional] 
- **dateTo** | **String**| Date To | [optional] 
- **terminalDigit** | **Number**| Terminal digit(s) | [optional] 
- **pendingDefendants** | **Boolean**| Pending defendants | [optional] 
- **terminatedDefendants** | **Boolean**| Terminated defendants | [optional] 
  **maxCostCents** | **String**| Max Cost Cents | [optional] 
 
 ### Return type
@@ -328,6 +250,84 @@ Name | Type | Description  | Notes
  **lastEntryTo** | **String**| Last Entry To Date | [optional] 
  **nos** | **String**| Nature of Suit | [optional] 
  **causeOfAction** | **String**| Cause of Action | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[www-authenticate](../README.md#www-authenticate)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json, application/xml
+
+<a name="searchCriminalCases"></a>
+# **searchCriminalCases**
+> searchCriminalCases(courtCode, opts)
+
+Local Court Criminal Cases Report
+
+Local Court Criminal Cases Report
+
+### Example
+```javascript
+var CourtApi = require('court_api');
+var defaultClient = CourtApi.ApiClient.instance;
+
+// Configure HTTP basic authorization: www-authenticate
+var www-authenticate = defaultClient.authentications['www-authenticate'];
+www-authenticate.username = 'YOUR USERNAME';
+www-authenticate.password = 'YOUR PASSWORD';
+
+var apiInstance = new CourtApi.PacerCaseLookupApi();
+
+var courtCode = "courtCode_example"; // String | Court Code
+
+var opts = { 
+  'office': "office_example", // String | Office
+  'caseType': "caseType_example", // String | Case Type
+  'caseFlags': "caseFlags_example", // String | Case flags
+  'citation': "citation_example", // String | Citation
+  'pendingCitations': true, // Boolean | Pending Citations
+  'terminatedCitations': true, // Boolean | Disposed Citations
+  'dateFrom': "dateFrom_example", // String | Date From
+  'dateTo': "dateTo_example", // String | Date To
+  'terminalDigit': 56, // Number | Terminal digit(s)
+  'pendingDefendants': true, // Boolean | Pending defendants
+  'terminatedDefendants': true, // Boolean | Terminated defendants
+  'maxCostCents': "maxCostCents_example" // String | Max Cost Cents
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.searchCriminalCases(courtCode, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **courtCode** | **String**| Court Code | 
+ **office** | **String**| Office | [optional] 
+ **caseType** | **String**| Case Type | [optional] 
+ **caseFlags** | **String**| Case flags | [optional] 
+ **citation** | **String**| Citation | [optional] 
+ **pendingCitations** | **Boolean**| Pending Citations | [optional] 
+ **terminatedCitations** | **Boolean**| Disposed Citations | [optional] 
+ **dateFrom** | **String**| Date From | [optional] 
+ **dateTo** | **String**| Date To | [optional] 
+ **terminalDigit** | **Number**| Terminal digit(s) | [optional] 
+ **pendingDefendants** | **Boolean**| Pending defendants | [optional] 
+ **terminatedDefendants** | **Boolean**| Terminated defendants | [optional] 
+ **maxCostCents** | **String**| Max Cost Cents | [optional] 
 
 ### Return type
 

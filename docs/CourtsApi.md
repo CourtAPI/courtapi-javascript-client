@@ -1,6 +1,6 @@
 # CourtApi.CourtsApi
 
-All URIs are relative to *https://v1.courtapi.com*
+All URIs are relative to *https://train.v1.courtapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

@@ -1,16 +1,16 @@
 # CourtApi.CaseLookupApi
 
-All URIs are relative to *https://v1.courtapi.com*
+All URIs are relative to *https://train.v1.courtapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**casesPacerSearchCaseNoCaseNumberGet**](CaseLookupApi.md#casesPacerSearchCaseNoCaseNumberGet) | **GET** /cases/pacer/search/case_no/{case_number} | Case Search by Case Number
-[**casesPacerSearchPartyTitleGet**](CaseLookupApi.md#casesPacerSearchPartyTitleGet) | **GET** /cases/pacer/search/party_title | Case Search by Case Title or Party Name
+[**searchByCaseNumber**](CaseLookupApi.md#searchByCaseNumber) | **GET** /cases/pacer/search/case_no/{case_number} | Case Search by Case Number
+[**searchByPartyTitle**](CaseLookupApi.md#searchByPartyTitle) | **GET** /cases/pacer/search/party_title | Case Search by Case Title or Party Name
 
 
-<a name="casesPacerSearchCaseNoCaseNumberGet"></a>
-# **casesPacerSearchCaseNoCaseNumberGet**
-> casesPacerSearchCaseNoCaseNumberGet(caseNumber, opts)
+<a name="searchByCaseNumber"></a>
+# **searchByCaseNumber**
+> searchByCaseNumber(caseNumber, opts)
 
 Case Search by Case Number
 
@@ -42,7 +42,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.casesPacerSearchCaseNoCaseNumberGet(caseNumber, opts, callback);
+apiInstance.searchByCaseNumber(caseNumber, opts, callback);
 ```
 
 ### Parameters
@@ -66,9 +66,9 @@ null (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-<a name="casesPacerSearchPartyTitleGet"></a>
-# **casesPacerSearchPartyTitleGet**
-> casesPacerSearchPartyTitleGet(_in, searchTerms, opts)
+<a name="searchByPartyTitle"></a>
+# **searchByPartyTitle**
+> searchByPartyTitle(_in, searchTerms, opts)
 
 Case Search by Case Title or Party Name
 
@@ -106,7 +106,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.casesPacerSearchPartyTitleGet(_in, searchTerms, opts, callback);
+apiInstance.searchByPartyTitle(_in, searchTerms, opts, callback);
 ```
 
 ### Parameters

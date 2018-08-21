@@ -50,6 +50,16 @@
   }
 
   describe('PacerCredentialsApi', function() {
+    describe('checkPacerCredentials', function() {
+      it('should call checkPacerCredentials successfully', function(done) {
+        //uncomment below and update the code to test checkPacerCredentials
+        //instance.checkPacerCredentials(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('deleteCredentials', function() {
       it('should call deleteCredentials successfully', function(done) {
         //uncomment below and update the code to test deleteCredentials
@@ -74,16 +84,6 @@
       it('should call saveCredentials successfully', function(done) {
         //uncomment below and update the code to test saveCredentials
         //instance.saveCredentials(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('validatePacerCredentials', function() {
-      it('should call validatePacerCredentials successfully', function(done) {
-        //uncomment below and update the code to test validatePacerCredentials
-        //instance.validatePacerCredentials(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -50,100 +50,100 @@
   }
 
   describe('NclApi', function() {
-    describe('pacerNclAppellatePost', function() {
-      it('should call pacerNclAppellatePost successfully', function(done) {
-        //uncomment below and update the code to test pacerNclAppellatePost
-        //instance.pacerNclAppellatePost(function(error) {
+    describe('getAppellateSearchResults', function() {
+      it('should call getAppellateSearchResults successfully', function(done) {
+        //uncomment below and update the code to test getAppellateSearchResults
+        //instance.getAppellateSearchResults(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('pacerNclAppellateSearchIdGet', function() {
-      it('should call pacerNclAppellateSearchIdGet successfully', function(done) {
-        //uncomment below and update the code to test pacerNclAppellateSearchIdGet
-        //instance.pacerNclAppellateSearchIdGet(function(error) {
+    describe('getBankruptcySearchResults', function() {
+      it('should call getBankruptcySearchResults successfully', function(done) {
+        //uncomment below and update the code to test getBankruptcySearchResults
+        //instance.getBankruptcySearchResults(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('pacerNclBankruptcyPost', function() {
-      it('should call pacerNclBankruptcyPost successfully', function(done) {
-        //uncomment below and update the code to test pacerNclBankruptcyPost
-        //instance.pacerNclBankruptcyPost(function(error) {
+    describe('getCivilSearchResults', function() {
+      it('should call getCivilSearchResults successfully', function(done) {
+        //uncomment below and update the code to test getCivilSearchResults
+        //instance.getCivilSearchResults(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('pacerNclBankruptcySearchIdGet', function() {
-      it('should call pacerNclBankruptcySearchIdGet successfully', function(done) {
-        //uncomment below and update the code to test pacerNclBankruptcySearchIdGet
-        //instance.pacerNclBankruptcySearchIdGet(function(error) {
+    describe('getCriminalSearchResults', function() {
+      it('should call getCriminalSearchResults successfully', function(done) {
+        //uncomment below and update the code to test getCriminalSearchResults
+        //instance.getCriminalSearchResults(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('pacerNclCivilPost', function() {
-      it('should call pacerNclCivilPost successfully', function(done) {
-        //uncomment below and update the code to test pacerNclCivilPost
-        //instance.pacerNclCivilPost(function(error) {
+    describe('getMDLSearchResults', function() {
+      it('should call getMDLSearchResults successfully', function(done) {
+        //uncomment below and update the code to test getMDLSearchResults
+        //instance.getMDLSearchResults(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('pacerNclCivilSearchIdGet', function() {
-      it('should call pacerNclCivilSearchIdGet successfully', function(done) {
-        //uncomment below and update the code to test pacerNclCivilSearchIdGet
-        //instance.pacerNclCivilSearchIdGet(function(error) {
+    describe('searchAppellateCases', function() {
+      it('should call searchAppellateCases successfully', function(done) {
+        //uncomment below and update the code to test searchAppellateCases
+        //instance.searchAppellateCases(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('pacerNclCriminalPost', function() {
-      it('should call pacerNclCriminalPost successfully', function(done) {
-        //uncomment below and update the code to test pacerNclCriminalPost
-        //instance.pacerNclCriminalPost(function(error) {
+    describe('searchBankruptcyCases', function() {
+      it('should call searchBankruptcyCases successfully', function(done) {
+        //uncomment below and update the code to test searchBankruptcyCases
+        //instance.searchBankruptcyCases(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('pacerNclCriminalSearchIdGet', function() {
-      it('should call pacerNclCriminalSearchIdGet successfully', function(done) {
-        //uncomment below and update the code to test pacerNclCriminalSearchIdGet
-        //instance.pacerNclCriminalSearchIdGet(function(error) {
+    describe('searchCivilCases', function() {
+      it('should call searchCivilCases successfully', function(done) {
+        //uncomment below and update the code to test searchCivilCases
+        //instance.searchCivilCases(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('pacerNclMdlPost', function() {
-      it('should call pacerNclMdlPost successfully', function(done) {
-        //uncomment below and update the code to test pacerNclMdlPost
-        //instance.pacerNclMdlPost(function(error) {
+    describe('searchCriminalCases', function() {
+      it('should call searchCriminalCases successfully', function(done) {
+        //uncomment below and update the code to test searchCriminalCases
+        //instance.searchCriminalCases(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('pacerNclMdlSearchIdGet', function() {
-      it('should call pacerNclMdlSearchIdGet successfully', function(done) {
-        //uncomment below and update the code to test pacerNclMdlSearchIdGet
-        //instance.pacerNclMdlSearchIdGet(function(error) {
+    describe('searchMDLCases', function() {
+      it('should call searchMDLCases successfully', function(done) {
+        //uncomment below and update the code to test searchMDLCases
+        //instance.searchMDLCases(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

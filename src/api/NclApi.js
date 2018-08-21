@@ -48,8 +48,313 @@
 
 
     /**
-     * Callback function to receive the result of the pacerNclAppellatePost operation.
-     * @callback module:api/NclApi~pacerNclAppellatePostCallback
+     * Callback function to receive the result of the getAppellateSearchResults operation.
+     * @callback module:api/NclApi~getAppellateSearchResultsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse200} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PACER NCL Appellate Case Search Result Navigation
+     * PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
+     * @param {String} searchId 
+     * @param {String} pageNo 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.sortField 
+     * @param {Boolean} opts.sortReverse 
+     * @param {module:api/NclApi~getAppellateSearchResultsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse200}
+     */
+    this.getAppellateSearchResults = function(searchId, pageNo, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'searchId' is set
+      if (searchId === undefined || searchId === null) {
+        throw new Error("Missing the required parameter 'searchId' when calling getAppellateSearchResults");
+      }
+
+      // verify the required parameter 'pageNo' is set
+      if (pageNo === undefined || pageNo === null) {
+        throw new Error("Missing the required parameter 'pageNo' when calling getAppellateSearchResults");
+      }
+
+
+      var pathParams = {
+        'search_id': searchId
+      };
+      var queryParams = {
+        'page_no': pageNo,
+        'sort_field': opts['sortField'],
+        'sort_reverse': opts['sortReverse'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = InlineResponse200;
+
+      return this.apiClient.callApi(
+        '/pacer/ncl/appellate/{search_id}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getBankruptcySearchResults operation.
+     * @callback module:api/NclApi~getBankruptcySearchResultsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse200} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PACER NCL Bankruptcy Case Search Result Navigation
+     * PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
+     * @param {String} searchId 
+     * @param {String} pageNo 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.sortField 
+     * @param {Boolean} opts.sortReverse 
+     * @param {module:api/NclApi~getBankruptcySearchResultsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse200}
+     */
+    this.getBankruptcySearchResults = function(searchId, pageNo, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'searchId' is set
+      if (searchId === undefined || searchId === null) {
+        throw new Error("Missing the required parameter 'searchId' when calling getBankruptcySearchResults");
+      }
+
+      // verify the required parameter 'pageNo' is set
+      if (pageNo === undefined || pageNo === null) {
+        throw new Error("Missing the required parameter 'pageNo' when calling getBankruptcySearchResults");
+      }
+
+
+      var pathParams = {
+        'search_id': searchId
+      };
+      var queryParams = {
+        'page_no': pageNo,
+        'sort_field': opts['sortField'],
+        'sort_reverse': opts['sortReverse'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = InlineResponse200;
+
+      return this.apiClient.callApi(
+        '/pacer/ncl/bankruptcy/{search_id}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCivilSearchResults operation.
+     * @callback module:api/NclApi~getCivilSearchResultsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse200} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PACER NCL Civil Case Search Result Navigation
+     * PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
+     * @param {String} searchId 
+     * @param {String} pageNo 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.sortField 
+     * @param {Boolean} opts.sortReverse 
+     * @param {module:api/NclApi~getCivilSearchResultsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse200}
+     */
+    this.getCivilSearchResults = function(searchId, pageNo, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'searchId' is set
+      if (searchId === undefined || searchId === null) {
+        throw new Error("Missing the required parameter 'searchId' when calling getCivilSearchResults");
+      }
+
+      // verify the required parameter 'pageNo' is set
+      if (pageNo === undefined || pageNo === null) {
+        throw new Error("Missing the required parameter 'pageNo' when calling getCivilSearchResults");
+      }
+
+
+      var pathParams = {
+        'search_id': searchId
+      };
+      var queryParams = {
+        'page_no': pageNo,
+        'sort_field': opts['sortField'],
+        'sort_reverse': opts['sortReverse'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = InlineResponse200;
+
+      return this.apiClient.callApi(
+        '/pacer/ncl/civil/{search_id}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCriminalSearchResults operation.
+     * @callback module:api/NclApi~getCriminalSearchResultsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse200} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PACER NCL Criminal Case Search Result Navigation
+     * PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
+     * @param {String} searchId 
+     * @param {String} pageNo 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.sortField 
+     * @param {Boolean} opts.sortReverse 
+     * @param {module:api/NclApi~getCriminalSearchResultsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse200}
+     */
+    this.getCriminalSearchResults = function(searchId, pageNo, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'searchId' is set
+      if (searchId === undefined || searchId === null) {
+        throw new Error("Missing the required parameter 'searchId' when calling getCriminalSearchResults");
+      }
+
+      // verify the required parameter 'pageNo' is set
+      if (pageNo === undefined || pageNo === null) {
+        throw new Error("Missing the required parameter 'pageNo' when calling getCriminalSearchResults");
+      }
+
+
+      var pathParams = {
+        'search_id': searchId
+      };
+      var queryParams = {
+        'page_no': pageNo,
+        'sort_field': opts['sortField'],
+        'sort_reverse': opts['sortReverse'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = InlineResponse200;
+
+      return this.apiClient.callApi(
+        '/pacer/ncl/criminal/{search_id}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getMDLSearchResults operation.
+     * @callback module:api/NclApi~getMDLSearchResultsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse200} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PACER NCL MDL Case Search Result Navigation
+     * PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
+     * @param {String} searchId 
+     * @param {String} pageNo 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.sortField 
+     * @param {Boolean} opts.sortReverse 
+     * @param {module:api/NclApi~getMDLSearchResultsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse200}
+     */
+    this.getMDLSearchResults = function(searchId, pageNo, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'searchId' is set
+      if (searchId === undefined || searchId === null) {
+        throw new Error("Missing the required parameter 'searchId' when calling getMDLSearchResults");
+      }
+
+      // verify the required parameter 'pageNo' is set
+      if (pageNo === undefined || pageNo === null) {
+        throw new Error("Missing the required parameter 'pageNo' when calling getMDLSearchResults");
+      }
+
+
+      var pathParams = {
+        'search_id': searchId
+      };
+      var queryParams = {
+        'page_no': pageNo,
+        'sort_field': opts['sortField'],
+        'sort_reverse': opts['sortReverse'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = InlineResponse200;
+
+      return this.apiClient.callApi(
+        '/pacer/ncl/mdl/{search_id}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the searchAppellateCases operation.
+     * @callback module:api/NclApi~searchAppellateCasesCallback
      * @param {String} error Error message, if any.
      * @param {module:model/InlineResponse200} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -69,10 +374,10 @@
      * @param {String} opts.closedTo 
      * @param {String} opts.partyName 
      * @param {Boolean} opts.partyExact 
-     * @param {module:api/NclApi~pacerNclAppellatePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/NclApi~searchAppellateCasesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse200}
      */
-    this.pacerNclAppellatePost = function(opts, callback) {
+    this.searchAppellateCases = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -111,69 +416,8 @@
     }
 
     /**
-     * Callback function to receive the result of the pacerNclAppellateSearchIdGet operation.
-     * @callback module:api/NclApi~pacerNclAppellateSearchIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse200} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * PACER NCL Appellate Case Search Result Navigation
-     * PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
-     * @param {String} searchId 
-     * @param {String} pageNo 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.sortField 
-     * @param {Boolean} opts.sortReverse 
-     * @param {module:api/NclApi~pacerNclAppellateSearchIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse200}
-     */
-    this.pacerNclAppellateSearchIdGet = function(searchId, pageNo, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'searchId' is set
-      if (searchId === undefined || searchId === null) {
-        throw new Error("Missing the required parameter 'searchId' when calling pacerNclAppellateSearchIdGet");
-      }
-
-      // verify the required parameter 'pageNo' is set
-      if (pageNo === undefined || pageNo === null) {
-        throw new Error("Missing the required parameter 'pageNo' when calling pacerNclAppellateSearchIdGet");
-      }
-
-
-      var pathParams = {
-        'search_id': searchId
-      };
-      var queryParams = {
-        'page_no': pageNo,
-        'sort_field': opts['sortField'],
-        'sort_reverse': opts['sortReverse'],
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = [];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = InlineResponse200;
-
-      return this.apiClient.callApi(
-        '/pacer/ncl/appellate/{search_id}', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the pacerNclBankruptcyPost operation.
-     * @callback module:api/NclApi~pacerNclBankruptcyPostCallback
+     * Callback function to receive the result of the searchBankruptcyCases operation.
+     * @callback module:api/NclApi~searchBankruptcyCasesCallback
      * @param {String} error Error message, if any.
      * @param {module:model/InlineResponse200} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -199,10 +443,10 @@
      * @param {Boolean} opts.partyExact 
      * @param {String} opts.ssn4 
      * @param {String} opts.ssntin 
-     * @param {module:api/NclApi~pacerNclBankruptcyPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/NclApi~searchBankruptcyCasesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse200}
      */
-    this.pacerNclBankruptcyPost = function(opts, callback) {
+    this.searchBankruptcyCases = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -247,69 +491,8 @@
     }
 
     /**
-     * Callback function to receive the result of the pacerNclBankruptcySearchIdGet operation.
-     * @callback module:api/NclApi~pacerNclBankruptcySearchIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse200} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * PACER NCL Bankruptcy Case Search Result Navigation
-     * PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
-     * @param {String} searchId 
-     * @param {String} pageNo 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.sortField 
-     * @param {Boolean} opts.sortReverse 
-     * @param {module:api/NclApi~pacerNclBankruptcySearchIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse200}
-     */
-    this.pacerNclBankruptcySearchIdGet = function(searchId, pageNo, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'searchId' is set
-      if (searchId === undefined || searchId === null) {
-        throw new Error("Missing the required parameter 'searchId' when calling pacerNclBankruptcySearchIdGet");
-      }
-
-      // verify the required parameter 'pageNo' is set
-      if (pageNo === undefined || pageNo === null) {
-        throw new Error("Missing the required parameter 'pageNo' when calling pacerNclBankruptcySearchIdGet");
-      }
-
-
-      var pathParams = {
-        'search_id': searchId
-      };
-      var queryParams = {
-        'page_no': pageNo,
-        'sort_field': opts['sortField'],
-        'sort_reverse': opts['sortReverse'],
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = [];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = InlineResponse200;
-
-      return this.apiClient.callApi(
-        '/pacer/ncl/bankruptcy/{search_id}', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the pacerNclCivilPost operation.
-     * @callback module:api/NclApi~pacerNclCivilPostCallback
+     * Callback function to receive the result of the searchCivilCases operation.
+     * @callback module:api/NclApi~searchCivilCasesCallback
      * @param {String} error Error message, if any.
      * @param {module:model/InlineResponse200} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -329,10 +512,10 @@
      * @param {String} opts.closedTo 
      * @param {String} opts.partyName 
      * @param {Boolean} opts.partyExact 
-     * @param {module:api/NclApi~pacerNclCivilPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/NclApi~searchCivilCasesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse200}
      */
-    this.pacerNclCivilPost = function(opts, callback) {
+    this.searchCivilCases = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -371,69 +554,8 @@
     }
 
     /**
-     * Callback function to receive the result of the pacerNclCivilSearchIdGet operation.
-     * @callback module:api/NclApi~pacerNclCivilSearchIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse200} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * PACER NCL Civil Case Search Result Navigation
-     * PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
-     * @param {String} searchId 
-     * @param {String} pageNo 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.sortField 
-     * @param {Boolean} opts.sortReverse 
-     * @param {module:api/NclApi~pacerNclCivilSearchIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse200}
-     */
-    this.pacerNclCivilSearchIdGet = function(searchId, pageNo, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'searchId' is set
-      if (searchId === undefined || searchId === null) {
-        throw new Error("Missing the required parameter 'searchId' when calling pacerNclCivilSearchIdGet");
-      }
-
-      // verify the required parameter 'pageNo' is set
-      if (pageNo === undefined || pageNo === null) {
-        throw new Error("Missing the required parameter 'pageNo' when calling pacerNclCivilSearchIdGet");
-      }
-
-
-      var pathParams = {
-        'search_id': searchId
-      };
-      var queryParams = {
-        'page_no': pageNo,
-        'sort_field': opts['sortField'],
-        'sort_reverse': opts['sortReverse'],
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = [];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = InlineResponse200;
-
-      return this.apiClient.callApi(
-        '/pacer/ncl/civil/{search_id}', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the pacerNclCriminalPost operation.
-     * @callback module:api/NclApi~pacerNclCriminalPostCallback
+     * Callback function to receive the result of the searchCriminalCases operation.
+     * @callback module:api/NclApi~searchCriminalCasesCallback
      * @param {String} error Error message, if any.
      * @param {module:model/InlineResponse200} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -452,10 +574,10 @@
      * @param {String} opts.closedTo 
      * @param {String} opts.partyName 
      * @param {Boolean} opts.partyExact 
-     * @param {module:api/NclApi~pacerNclCriminalPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/NclApi~searchCriminalCasesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse200}
      */
-    this.pacerNclCriminalPost = function(opts, callback) {
+    this.searchCriminalCases = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -493,69 +615,8 @@
     }
 
     /**
-     * Callback function to receive the result of the pacerNclCriminalSearchIdGet operation.
-     * @callback module:api/NclApi~pacerNclCriminalSearchIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse200} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * PACER NCL Criminal Case Search Result Navigation
-     * PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
-     * @param {String} searchId 
-     * @param {String} pageNo 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.sortField 
-     * @param {Boolean} opts.sortReverse 
-     * @param {module:api/NclApi~pacerNclCriminalSearchIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse200}
-     */
-    this.pacerNclCriminalSearchIdGet = function(searchId, pageNo, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'searchId' is set
-      if (searchId === undefined || searchId === null) {
-        throw new Error("Missing the required parameter 'searchId' when calling pacerNclCriminalSearchIdGet");
-      }
-
-      // verify the required parameter 'pageNo' is set
-      if (pageNo === undefined || pageNo === null) {
-        throw new Error("Missing the required parameter 'pageNo' when calling pacerNclCriminalSearchIdGet");
-      }
-
-
-      var pathParams = {
-        'search_id': searchId
-      };
-      var queryParams = {
-        'page_no': pageNo,
-        'sort_field': opts['sortField'],
-        'sort_reverse': opts['sortReverse'],
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = [];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = InlineResponse200;
-
-      return this.apiClient.callApi(
-        '/pacer/ncl/criminal/{search_id}', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the pacerNclMdlPost operation.
-     * @callback module:api/NclApi~pacerNclMdlPostCallback
+     * Callback function to receive the result of the searchMDLCases operation.
+     * @callback module:api/NclApi~searchMDLCasesCallback
      * @param {String} error Error message, if any.
      * @param {module:model/InlineResponse200} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -575,10 +636,10 @@
      * @param {String} opts.closedTo 
      * @param {String} opts.partyName 
      * @param {Boolean} opts.partyExact 
-     * @param {module:api/NclApi~pacerNclMdlPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/NclApi~searchMDLCasesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse200}
      */
-    this.pacerNclMdlPost = function(opts, callback) {
+    this.searchMDLCases = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -611,67 +672,6 @@
 
       return this.apiClient.callApi(
         '/pacer/ncl/mdl', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the pacerNclMdlSearchIdGet operation.
-     * @callback module:api/NclApi~pacerNclMdlSearchIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse200} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * PACER NCL MDL Case Search Result Navigation
-     * PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
-     * @param {String} searchId 
-     * @param {String} pageNo 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.sortField 
-     * @param {Boolean} opts.sortReverse 
-     * @param {module:api/NclApi~pacerNclMdlSearchIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse200}
-     */
-    this.pacerNclMdlSearchIdGet = function(searchId, pageNo, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'searchId' is set
-      if (searchId === undefined || searchId === null) {
-        throw new Error("Missing the required parameter 'searchId' when calling pacerNclMdlSearchIdGet");
-      }
-
-      // verify the required parameter 'pageNo' is set
-      if (pageNo === undefined || pageNo === null) {
-        throw new Error("Missing the required parameter 'pageNo' when calling pacerNclMdlSearchIdGet");
-      }
-
-
-      var pathParams = {
-        'search_id': searchId
-      };
-      var queryParams = {
-        'page_no': pageNo,
-        'sort_field': opts['sortField'],
-        'sort_reverse': opts['sortReverse'],
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = [];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = InlineResponse200;
-
-      return this.apiClient.callApi(
-        '/pacer/ncl/mdl/{search_id}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

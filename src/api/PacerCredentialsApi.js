@@ -48,6 +48,52 @@
 
 
     /**
+     * Callback function to receive the result of the checkPacerCredentials operation.
+     * @callback module:api/PacerCredentialsApi~checkPacerCredentialsCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate Credentials
+     * Validate Credentials
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.pacerUser PACER User Name
+     * @param {String} opts.pacerPass PACER Password
+     * @param {module:api/PacerCredentialsApi~checkPacerCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.checkPacerCredentials = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'pacer_user': opts['pacerUser'],
+        'pacer_pass': opts['pacerPass']
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = ['application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/pacer/credentials/validate', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the deleteCredentials operation.
      * @callback module:api/PacerCredentialsApi~deleteCredentialsCallback
      * @param {String} error Error message, if any.
@@ -168,52 +214,6 @@
 
       return this.apiClient.callApi(
         '/pacer/credentials', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the validatePacerCredentials operation.
-     * @callback module:api/PacerCredentialsApi~validatePacerCredentialsCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Validate Credentials
-     * Validate Credentials
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.pacerUser PACER User Name
-     * @param {String} opts.pacerPass PACER Password
-     * @param {module:api/PacerCredentialsApi~validatePacerCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.validatePacerCredentials = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-        'pacer_user': opts['pacerUser'],
-        'pacer_pass': opts['pacerPass']
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = ['application/x-www-form-urlencoded'];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/pacer/credentials/validate', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

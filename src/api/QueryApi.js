@@ -191,63 +191,8 @@
     }
 
     /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberAliasPost operation.
-     * @callback module:api/QueryApi~casesPacerCourtCodeCaseNumberAliasPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20011} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * PACER Query Case Alias
-     * PACER Query Case Alias
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {module:api/QueryApi~casesPacerCourtCodeCaseNumberAliasPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20011}
-     */
-    this.casesPacerCourtCodeCaseNumberAliasPost = function(courtCode, caseNumber, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberAliasPost");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberAliasPost");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = ['application/x-www-form-urlencoded'];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = InlineResponse20011;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/alias', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberAssociatedCasesPost operation.
-     * @callback module:api/QueryApi~casesPacerCourtCodeCaseNumberAssociatedCasesPostCallback
+     * Callback function to receive the result of the updateAssociatedCases operation.
+     * @callback module:api/QueryApi~updateAssociatedCasesCallback
      * @param {String} error Error message, if any.
      * @param {module:model/InlineResponse2003} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -258,20 +203,20 @@
      * PACER Query Case Associated Cases
      * @param {String} courtCode Court Code
      * @param {String} caseNumber Case Number
-     * @param {module:api/QueryApi~casesPacerCourtCodeCaseNumberAssociatedCasesPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/QueryApi~updateAssociatedCasesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse2003}
      */
-    this.casesPacerCourtCodeCaseNumberAssociatedCasesPost = function(courtCode, caseNumber, callback) {
+    this.updateAssociatedCases = function(courtCode, caseNumber, callback) {
       var postBody = null;
 
       // verify the required parameter 'courtCode' is set
       if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberAssociatedCasesPost");
+        throw new Error("Missing the required parameter 'courtCode' when calling updateAssociatedCases");
       }
 
       // verify the required parameter 'caseNumber' is set
       if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberAssociatedCasesPost");
+        throw new Error("Missing the required parameter 'caseNumber' when calling updateAssociatedCases");
       }
 
 
@@ -301,8 +246,8 @@
     }
 
     /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberAttorneysPost operation.
-     * @callback module:api/QueryApi~casesPacerCourtCodeCaseNumberAttorneysPostCallback
+     * Callback function to receive the result of the updateAttorneys operation.
+     * @callback module:api/QueryApi~updateAttorneysCallback
      * @param {String} error Error message, if any.
      * @param {module:model/InlineResponse2004} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -313,20 +258,20 @@
      * PACER Query Case Attorneys
      * @param {String} courtCode Court Code
      * @param {String} caseNumber Case Number
-     * @param {module:api/QueryApi~casesPacerCourtCodeCaseNumberAttorneysPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/QueryApi~updateAttorneysCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse2004}
      */
-    this.casesPacerCourtCodeCaseNumberAttorneysPost = function(courtCode, caseNumber, callback) {
+    this.updateAttorneys = function(courtCode, caseNumber, callback) {
       var postBody = null;
 
       // verify the required parameter 'courtCode' is set
       if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberAttorneysPost");
+        throw new Error("Missing the required parameter 'courtCode' when calling updateAttorneys");
       }
 
       // verify the required parameter 'caseNumber' is set
       if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberAttorneysPost");
+        throw new Error("Missing the required parameter 'caseNumber' when calling updateAttorneys");
       }
 
 
@@ -356,8 +301,8 @@
     }
 
     /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberCaseFileLocationPost operation.
-     * @callback module:api/QueryApi~casesPacerCourtCodeCaseNumberCaseFileLocationPostCallback
+     * Callback function to receive the result of the updateCaseFileLocation operation.
+     * @callback module:api/QueryApi~updateCaseFileLocationCallback
      * @param {String} error Error message, if any.
      * @param {module:model/InlineResponse20016} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -368,20 +313,20 @@
      * PACER Query Case File Location
      * @param {String} courtCode Court Code
      * @param {String} caseNumber Case Number
-     * @param {module:api/QueryApi~casesPacerCourtCodeCaseNumberCaseFileLocationPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/QueryApi~updateCaseFileLocationCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse20016}
      */
-    this.casesPacerCourtCodeCaseNumberCaseFileLocationPost = function(courtCode, caseNumber, callback) {
+    this.updateCaseFileLocation = function(courtCode, caseNumber, callback) {
       var postBody = null;
 
       // verify the required parameter 'courtCode' is set
       if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberCaseFileLocationPost");
+        throw new Error("Missing the required parameter 'courtCode' when calling updateCaseFileLocation");
       }
 
       // verify the required parameter 'caseNumber' is set
       if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberCaseFileLocationPost");
+        throw new Error("Missing the required parameter 'caseNumber' when calling updateCaseFileLocation");
       }
 
 
@@ -411,8 +356,8 @@
     }
 
     /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberCaseSummaryPost operation.
-     * @callback module:api/QueryApi~casesPacerCourtCodeCaseNumberCaseSummaryPostCallback
+     * Callback function to receive the result of the updateCaseSummary operation.
+     * @callback module:api/QueryApi~updateCaseSummaryCallback
      * @param {String} error Error message, if any.
      * @param {module:model/InlineResponse20012} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -423,20 +368,20 @@
      * PACER Query Case Summary
      * @param {String} courtCode Court Code
      * @param {String} caseNumber Case Number
-     * @param {module:api/QueryApi~casesPacerCourtCodeCaseNumberCaseSummaryPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/QueryApi~updateCaseSummaryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse20012}
      */
-    this.casesPacerCourtCodeCaseNumberCaseSummaryPost = function(courtCode, caseNumber, callback) {
+    this.updateCaseSummary = function(courtCode, caseNumber, callback) {
       var postBody = null;
 
       // verify the required parameter 'courtCode' is set
       if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberCaseSummaryPost");
+        throw new Error("Missing the required parameter 'courtCode' when calling updateCaseSummary");
       }
 
       // verify the required parameter 'caseNumber' is set
       if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberCaseSummaryPost");
+        throw new Error("Missing the required parameter 'caseNumber' when calling updateCaseSummary");
       }
 
 
@@ -460,645 +405,6 @@
 
       return this.apiClient.callApi(
         '/cases/pacer/{court_code}/{case_number}/case_summary', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberCreditorMailingPost operation.
-     * @callback module:api/QueryApi~casesPacerCourtCodeCaseNumberCreditorMailingPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20013} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * PACER Query Case Creditor Mailing
-     * PACER Query Case Creditor Mailing
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.caseCode 
-     * @param {module:model/String} opts.format 
-     * @param {module:api/QueryApi~casesPacerCourtCodeCaseNumberCreditorMailingPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20013}
-     */
-    this.casesPacerCourtCodeCaseNumberCreditorMailingPost = function(courtCode, caseNumber, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberCreditorMailingPost");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberCreditorMailingPost");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-        'case_code': opts['caseCode'],
-        'format': opts['format']
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = ['application/x-www-form-urlencoded'];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = InlineResponse20013;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/creditor_mailing', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberCreditorsPost operation.
-     * @callback module:api/QueryApi~casesPacerCourtCodeCaseNumberCreditorsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2005} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * PACER Query Case Creditors
-     * PACER Query Case Creditors
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.creditorType 
-     * @param {module:api/QueryApi~casesPacerCourtCodeCaseNumberCreditorsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2005}
-     */
-    this.casesPacerCourtCodeCaseNumberCreditorsPost = function(courtCode, caseNumber, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberCreditorsPost");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberCreditorsPost");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-        'creditor_type': opts['creditorType']
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = ['application/x-www-form-urlencoded'];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = InlineResponse2005;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/creditors', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberFilersPost operation.
-     * @callback module:api/QueryApi~casesPacerCourtCodeCaseNumberFilersPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2007} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * PACER Query Case Filers
-     * PACER Query Case Filers
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {module:api/QueryApi~casesPacerCourtCodeCaseNumberFilersPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2007}
-     */
-    this.casesPacerCourtCodeCaseNumberFilersPost = function(courtCode, caseNumber, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberFilersPost");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberFilersPost");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = ['application/x-www-form-urlencoded'];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = InlineResponse2007;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/filers', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberHistoryPost operation.
-     * @callback module:api/QueryApi~casesPacerCourtCodeCaseNumberHistoryPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20014} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * PACER Query Case History
-     * PACER Query Case History
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.historyType 
-     * @param {module:model/String} opts.sort 
-     * @param {Boolean} opts.showDocket 
-     * @param {module:api/QueryApi~casesPacerCourtCodeCaseNumberHistoryPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20014}
-     */
-    this.casesPacerCourtCodeCaseNumberHistoryPost = function(courtCode, caseNumber, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberHistoryPost");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberHistoryPost");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-        'history_type': opts['historyType'],
-        'sort': opts['sort'],
-        'show_docket': opts['showDocket']
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = ['application/x-www-form-urlencoded'];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = InlineResponse20014;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/history', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberMenuPost operation.
-     * @callback module:api/QueryApi~casesPacerCourtCodeCaseNumberMenuPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2001} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * PACER Query Case Menu
-     * PACER Query Case Menu
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {module:api/QueryApi~casesPacerCourtCodeCaseNumberMenuPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2001}
-     */
-    this.casesPacerCourtCodeCaseNumberMenuPost = function(courtCode, caseNumber, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberMenuPost");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberMenuPost");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = ['application/x-www-form-urlencoded'];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = InlineResponse2001;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/menu', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberNoticePost operation.
-     * @callback module:api/QueryApi~casesPacerCourtCodeCaseNumberNoticePostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2002} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * PACER Query Case Notice
-     * PACER Query Case Notice
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {module:api/QueryApi~casesPacerCourtCodeCaseNumberNoticePostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2002}
-     */
-    this.casesPacerCourtCodeCaseNumberNoticePost = function(courtCode, caseNumber, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberNoticePost");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberNoticePost");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = ['application/x-www-form-urlencoded'];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = InlineResponse2002;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/notice', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberPartiesPost operation.
-     * @callback module:api/QueryApi~casesPacerCourtCodeCaseNumberPartiesPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2006} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * PACER Query Case Parties
-     * PACER Query Case Parties
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {module:api/QueryApi~casesPacerCourtCodeCaseNumberPartiesPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2006}
-     */
-    this.casesPacerCourtCodeCaseNumberPartiesPost = function(courtCode, caseNumber, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberPartiesPost");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberPartiesPost");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = ['application/x-www-form-urlencoded'];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = InlineResponse2006;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/parties', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberRelatedTransactionsPost operation.
-     * @callback module:api/QueryApi~casesPacerCourtCodeCaseNumberRelatedTransactionsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20015} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * PACER Query Case Related Transactions
-     * PACER Query Case Related Transactions
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.docFrom 
-     * @param {Number} opts.docTo 
-     * @param {String} opts.dataFiledFrom 
-     * @param {String} opts.dataFiledTo 
-     * @param {Boolean} opts.showPending 
-     * @param {Boolean} opts.showTerminated 
-     * @param {module:model/String} opts.sort 
-     * @param {module:api/QueryApi~casesPacerCourtCodeCaseNumberRelatedTransactionsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20015}
-     */
-    this.casesPacerCourtCodeCaseNumberRelatedTransactionsPost = function(courtCode, caseNumber, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberRelatedTransactionsPost");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberRelatedTransactionsPost");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-        'doc_from': opts['docFrom'],
-        'doc_to': opts['docTo'],
-        'data_filed_from': opts['dataFiledFrom'],
-        'data_filed_to': opts['dataFiledTo'],
-        'show_pending': opts['showPending'],
-        'show_terminated': opts['showTerminated'],
-        'sort': opts['sort']
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = ['application/x-www-form-urlencoded'];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = InlineResponse20015;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/related_transactions', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberSchedulePost operation.
-     * @callback module:api/QueryApi~casesPacerCourtCodeCaseNumberSchedulePostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2008} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * PACER Query Case Schedule
-     * PACER Query Case Schedule
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {module:api/QueryApi~casesPacerCourtCodeCaseNumberSchedulePostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2008}
-     */
-    this.casesPacerCourtCodeCaseNumberSchedulePost = function(courtCode, caseNumber, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberSchedulePost");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberSchedulePost");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = ['application/x-www-form-urlencoded'];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = InlineResponse2008;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/schedule', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberStatusPendingPost operation.
-     * @callback module:api/QueryApi~casesPacerCourtCodeCaseNumberStatusPendingPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2009} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * PACER Query Case Status Pending
-     * PACER Query Case Status Pending
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {module:api/QueryApi~casesPacerCourtCodeCaseNumberStatusPendingPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2009}
-     */
-    this.casesPacerCourtCodeCaseNumberStatusPendingPost = function(courtCode, caseNumber, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberStatusPendingPost");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberStatusPendingPost");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = ['application/x-www-form-urlencoded'];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = InlineResponse2009;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/status_pending', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the casesPacerCourtCodeCaseNumberTrusteesPost operation.
-     * @callback module:api/QueryApi~casesPacerCourtCodeCaseNumberTrusteesPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20010} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * PACER Query Case Trustees
-     * PACER Query Case Trustees
-     * @param {String} courtCode Court Code
-     * @param {String} caseNumber Case Number
-     * @param {module:api/QueryApi~casesPacerCourtCodeCaseNumberTrusteesPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20010}
-     */
-    this.casesPacerCourtCodeCaseNumberTrusteesPost = function(courtCode, caseNumber, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'courtCode' is set
-      if (courtCode === undefined || courtCode === null) {
-        throw new Error("Missing the required parameter 'courtCode' when calling casesPacerCourtCodeCaseNumberTrusteesPost");
-      }
-
-      // verify the required parameter 'caseNumber' is set
-      if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerCourtCodeCaseNumberTrusteesPost");
-      }
-
-
-      var pathParams = {
-        'court_code': courtCode,
-        'case_number': caseNumber
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['www-authenticate'];
-      var contentTypes = ['application/x-www-form-urlencoded'];
-      var accepts = ['application/json', 'application/xml'];
-      var returnType = InlineResponse20010;
-
-      return this.apiClient.callApi(
-        '/cases/pacer/{court_code}/{case_number}/trustees', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1248,6 +554,126 @@
     }
 
     /**
+     * Callback function to receive the result of the updateCreditorMailingMatrix operation.
+     * @callback module:api/QueryApi~updateCreditorMailingMatrixCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20013} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PACER Query Case Creditor Mailing
+     * PACER Query Case Creditor Mailing
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.caseCode 
+     * @param {module:model/String} opts.format 
+     * @param {module:api/QueryApi~updateCreditorMailingMatrixCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20013}
+     */
+    this.updateCreditorMailingMatrix = function(courtCode, caseNumber, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling updateCreditorMailingMatrix");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling updateCreditorMailingMatrix");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'case_code': opts['caseCode'],
+        'format': opts['format']
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = ['application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = InlineResponse20013;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/creditor_mailing', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateCreditors operation.
+     * @callback module:api/QueryApi~updateCreditorsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2005} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PACER Query Case Creditors
+     * PACER Query Case Creditors
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.creditorType 
+     * @param {module:api/QueryApi~updateCreditorsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2005}
+     */
+    this.updateCreditors = function(courtCode, caseNumber, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling updateCreditors");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling updateCreditors");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'creditor_type': opts['creditorType']
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = ['application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = InlineResponse2005;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/creditors', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the updateDocketDocuments operation.
      * @callback module:api/QueryApi~updateDocketDocumentsCallback
      * @param {String} error Error message, if any.
@@ -1372,6 +798,580 @@
 
       return this.apiClient.callApi(
         '/cases/pacer/{court_code}/{case_number}/dockets/update', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateFilers operation.
+     * @callback module:api/QueryApi~updateFilersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2007} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PACER Query Case Filers
+     * PACER Query Case Filers
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {module:api/QueryApi~updateFilersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2007}
+     */
+    this.updateFilers = function(courtCode, caseNumber, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling updateFilers");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling updateFilers");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = ['application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = InlineResponse2007;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/filers', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateHistory operation.
+     * @callback module:api/QueryApi~updateHistoryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20014} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PACER Query Case History
+     * PACER Query Case History
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.historyType 
+     * @param {module:model/String} opts.sort 
+     * @param {Boolean} opts.showDocket 
+     * @param {module:api/QueryApi~updateHistoryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20014}
+     */
+    this.updateHistory = function(courtCode, caseNumber, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling updateHistory");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling updateHistory");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'history_type': opts['historyType'],
+        'sort': opts['sort'],
+        'show_docket': opts['showDocket']
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = ['application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = InlineResponse20014;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/history', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateMenu operation.
+     * @callback module:api/QueryApi~updateMenuCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2001} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PACER Query Case Menu
+     * PACER Query Case Menu
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {module:api/QueryApi~updateMenuCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2001}
+     */
+    this.updateMenu = function(courtCode, caseNumber, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling updateMenu");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling updateMenu");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = ['application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = InlineResponse2001;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/menu', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateNotice operation.
+     * @callback module:api/QueryApi~updateNoticeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2002} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PACER Query Case Notice
+     * PACER Query Case Notice
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {module:api/QueryApi~updateNoticeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2002}
+     */
+    this.updateNotice = function(courtCode, caseNumber, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling updateNotice");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling updateNotice");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = ['application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = InlineResponse2002;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/notice', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateParties operation.
+     * @callback module:api/QueryApi~updatePartiesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2006} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PACER Query Case Parties
+     * PACER Query Case Parties
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {module:api/QueryApi~updatePartiesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2006}
+     */
+    this.updateParties = function(courtCode, caseNumber, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling updateParties");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling updateParties");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = ['application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = InlineResponse2006;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/parties', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updatePartyAliases operation.
+     * @callback module:api/QueryApi~updatePartyAliasesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20011} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PACER Query Case Alias
+     * PACER Query Case Alias
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {module:api/QueryApi~updatePartyAliasesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20011}
+     */
+    this.updatePartyAliases = function(courtCode, caseNumber, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling updatePartyAliases");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling updatePartyAliases");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = ['application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = InlineResponse20011;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/alias', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updatePendingStatus operation.
+     * @callback module:api/QueryApi~updatePendingStatusCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2009} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PACER Query Case Status Pending
+     * PACER Query Case Status Pending
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {module:api/QueryApi~updatePendingStatusCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2009}
+     */
+    this.updatePendingStatus = function(courtCode, caseNumber, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling updatePendingStatus");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling updatePendingStatus");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = ['application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = InlineResponse2009;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/status_pending', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateRelatedTransactions operation.
+     * @callback module:api/QueryApi~updateRelatedTransactionsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20015} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PACER Query Case Related Transactions
+     * PACER Query Case Related Transactions
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.docFrom 
+     * @param {Number} opts.docTo 
+     * @param {String} opts.dataFiledFrom 
+     * @param {String} opts.dataFiledTo 
+     * @param {Boolean} opts.showPending 
+     * @param {Boolean} opts.showTerminated 
+     * @param {module:model/String} opts.sort 
+     * @param {module:api/QueryApi~updateRelatedTransactionsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20015}
+     */
+    this.updateRelatedTransactions = function(courtCode, caseNumber, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling updateRelatedTransactions");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling updateRelatedTransactions");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'doc_from': opts['docFrom'],
+        'doc_to': opts['docTo'],
+        'data_filed_from': opts['dataFiledFrom'],
+        'data_filed_to': opts['dataFiledTo'],
+        'show_pending': opts['showPending'],
+        'show_terminated': opts['showTerminated'],
+        'sort': opts['sort']
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = ['application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = InlineResponse20015;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/related_transactions', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateSchedule operation.
+     * @callback module:api/QueryApi~updateScheduleCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2008} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PACER Query Case Schedule
+     * PACER Query Case Schedule
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {module:api/QueryApi~updateScheduleCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2008}
+     */
+    this.updateSchedule = function(courtCode, caseNumber, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling updateSchedule");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling updateSchedule");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = ['application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = InlineResponse2008;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/schedule', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateTrustees operation.
+     * @callback module:api/QueryApi~updateTrusteesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20010} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PACER Query Case Trustees
+     * PACER Query Case Trustees
+     * @param {String} courtCode Court Code
+     * @param {String} caseNumber Case Number
+     * @param {module:api/QueryApi~updateTrusteesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20010}
+     */
+    this.updateTrustees = function(courtCode, caseNumber, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'courtCode' is set
+      if (courtCode === undefined || courtCode === null) {
+        throw new Error("Missing the required parameter 'courtCode' when calling updateTrustees");
+      }
+
+      // verify the required parameter 'caseNumber' is set
+      if (caseNumber === undefined || caseNumber === null) {
+        throw new Error("Missing the required parameter 'caseNumber' when calling updateTrustees");
+      }
+
+
+      var pathParams = {
+        'court_code': courtCode,
+        'case_number': caseNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['www-authenticate'];
+      var contentTypes = ['application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'application/xml'];
+      var returnType = InlineResponse20010;
+
+      return this.apiClient.callApi(
+        '/cases/pacer/{court_code}/{case_number}/trustees', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

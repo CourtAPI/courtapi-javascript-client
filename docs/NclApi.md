@@ -1,24 +1,329 @@
 # CourtApi.NclApi
 
-All URIs are relative to *https://v1.courtapi.com*
+All URIs are relative to *https://train.v1.courtapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**pacerNclAppellatePost**](NclApi.md#pacerNclAppellatePost) | **POST** /pacer/ncl/appellate | PACER NCL Appellate Case Search
-[**pacerNclAppellateSearchIdGet**](NclApi.md#pacerNclAppellateSearchIdGet) | **GET** /pacer/ncl/appellate/{search_id} | PACER NCL Appellate Case Search Result Navigation
-[**pacerNclBankruptcyPost**](NclApi.md#pacerNclBankruptcyPost) | **POST** /pacer/ncl/bankruptcy | PACER NCL Bankruptcy Case Search
-[**pacerNclBankruptcySearchIdGet**](NclApi.md#pacerNclBankruptcySearchIdGet) | **GET** /pacer/ncl/bankruptcy/{search_id} | PACER NCL Bankruptcy Case Search Result Navigation
-[**pacerNclCivilPost**](NclApi.md#pacerNclCivilPost) | **POST** /pacer/ncl/civil | PACER NCL Civil Case Search
-[**pacerNclCivilSearchIdGet**](NclApi.md#pacerNclCivilSearchIdGet) | **GET** /pacer/ncl/civil/{search_id} | PACER NCL Civil Case Search Result Navigation
-[**pacerNclCriminalPost**](NclApi.md#pacerNclCriminalPost) | **POST** /pacer/ncl/criminal | PACER NCL Criminal Case Search
-[**pacerNclCriminalSearchIdGet**](NclApi.md#pacerNclCriminalSearchIdGet) | **GET** /pacer/ncl/criminal/{search_id} | PACER NCL Criminal Case Search Result Navigation
-[**pacerNclMdlPost**](NclApi.md#pacerNclMdlPost) | **POST** /pacer/ncl/mdl | PACER NCL MDL Case Search
-[**pacerNclMdlSearchIdGet**](NclApi.md#pacerNclMdlSearchIdGet) | **GET** /pacer/ncl/mdl/{search_id} | PACER NCL MDL Case Search Result Navigation
+[**getAppellateSearchResults**](NclApi.md#getAppellateSearchResults) | **GET** /pacer/ncl/appellate/{search_id} | PACER NCL Appellate Case Search Result Navigation
+[**getBankruptcySearchResults**](NclApi.md#getBankruptcySearchResults) | **GET** /pacer/ncl/bankruptcy/{search_id} | PACER NCL Bankruptcy Case Search Result Navigation
+[**getCivilSearchResults**](NclApi.md#getCivilSearchResults) | **GET** /pacer/ncl/civil/{search_id} | PACER NCL Civil Case Search Result Navigation
+[**getCriminalSearchResults**](NclApi.md#getCriminalSearchResults) | **GET** /pacer/ncl/criminal/{search_id} | PACER NCL Criminal Case Search Result Navigation
+[**getMDLSearchResults**](NclApi.md#getMDLSearchResults) | **GET** /pacer/ncl/mdl/{search_id} | PACER NCL MDL Case Search Result Navigation
+[**searchAppellateCases**](NclApi.md#searchAppellateCases) | **POST** /pacer/ncl/appellate | PACER NCL Appellate Case Search
+[**searchBankruptcyCases**](NclApi.md#searchBankruptcyCases) | **POST** /pacer/ncl/bankruptcy | PACER NCL Bankruptcy Case Search
+[**searchCivilCases**](NclApi.md#searchCivilCases) | **POST** /pacer/ncl/civil | PACER NCL Civil Case Search
+[**searchCriminalCases**](NclApi.md#searchCriminalCases) | **POST** /pacer/ncl/criminal | PACER NCL Criminal Case Search
+[**searchMDLCases**](NclApi.md#searchMDLCases) | **POST** /pacer/ncl/mdl | PACER NCL MDL Case Search
 
 
-<a name="pacerNclAppellatePost"></a>
-# **pacerNclAppellatePost**
-> InlineResponse200 pacerNclAppellatePost(opts)
+<a name="getAppellateSearchResults"></a>
+# **getAppellateSearchResults**
+> InlineResponse200 getAppellateSearchResults(searchId, pageNo, opts)
+
+PACER NCL Appellate Case Search Result Navigation
+
+PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
+
+### Example
+```javascript
+var CourtApi = require('court_api');
+var defaultClient = CourtApi.ApiClient.instance;
+
+// Configure HTTP basic authorization: www-authenticate
+var www-authenticate = defaultClient.authentications['www-authenticate'];
+www-authenticate.username = 'YOUR USERNAME';
+www-authenticate.password = 'YOUR PASSWORD';
+
+var apiInstance = new CourtApi.NclApi();
+
+var searchId = "searchId_example"; // String | 
+
+var pageNo = "pageNo_example"; // String | 
+
+var opts = { 
+  'sortField': "sortField_example", // String | 
+  'sortReverse': true // Boolean | 
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getAppellateSearchResults(searchId, pageNo, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **searchId** | **String**|  | 
+ **pageNo** | **String**|  | 
+ **sortField** | **String**|  | [optional] 
+ **sortReverse** | **Boolean**|  | [optional] 
+
+### Return type
+
+[**InlineResponse200**](InlineResponse200.md)
+
+### Authorization
+
+[www-authenticate](../README.md#www-authenticate)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/xml
+
+<a name="getBankruptcySearchResults"></a>
+# **getBankruptcySearchResults**
+> InlineResponse200 getBankruptcySearchResults(searchId, pageNo, opts)
+
+PACER NCL Bankruptcy Case Search Result Navigation
+
+PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
+
+### Example
+```javascript
+var CourtApi = require('court_api');
+var defaultClient = CourtApi.ApiClient.instance;
+
+// Configure HTTP basic authorization: www-authenticate
+var www-authenticate = defaultClient.authentications['www-authenticate'];
+www-authenticate.username = 'YOUR USERNAME';
+www-authenticate.password = 'YOUR PASSWORD';
+
+var apiInstance = new CourtApi.NclApi();
+
+var searchId = "searchId_example"; // String | 
+
+var pageNo = "pageNo_example"; // String | 
+
+var opts = { 
+  'sortField': "sortField_example", // String | 
+  'sortReverse': true // Boolean | 
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getBankruptcySearchResults(searchId, pageNo, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **searchId** | **String**|  | 
+ **pageNo** | **String**|  | 
+ **sortField** | **String**|  | [optional] 
+ **sortReverse** | **Boolean**|  | [optional] 
+
+### Return type
+
+[**InlineResponse200**](InlineResponse200.md)
+
+### Authorization
+
+[www-authenticate](../README.md#www-authenticate)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/xml
+
+<a name="getCivilSearchResults"></a>
+# **getCivilSearchResults**
+> InlineResponse200 getCivilSearchResults(searchId, pageNo, opts)
+
+PACER NCL Civil Case Search Result Navigation
+
+PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
+
+### Example
+```javascript
+var CourtApi = require('court_api');
+var defaultClient = CourtApi.ApiClient.instance;
+
+// Configure HTTP basic authorization: www-authenticate
+var www-authenticate = defaultClient.authentications['www-authenticate'];
+www-authenticate.username = 'YOUR USERNAME';
+www-authenticate.password = 'YOUR PASSWORD';
+
+var apiInstance = new CourtApi.NclApi();
+
+var searchId = "searchId_example"; // String | 
+
+var pageNo = "pageNo_example"; // String | 
+
+var opts = { 
+  'sortField': "sortField_example", // String | 
+  'sortReverse': true // Boolean | 
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getCivilSearchResults(searchId, pageNo, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **searchId** | **String**|  | 
+ **pageNo** | **String**|  | 
+ **sortField** | **String**|  | [optional] 
+ **sortReverse** | **Boolean**|  | [optional] 
+
+### Return type
+
+[**InlineResponse200**](InlineResponse200.md)
+
+### Authorization
+
+[www-authenticate](../README.md#www-authenticate)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/xml
+
+<a name="getCriminalSearchResults"></a>
+# **getCriminalSearchResults**
+> InlineResponse200 getCriminalSearchResults(searchId, pageNo, opts)
+
+PACER NCL Criminal Case Search Result Navigation
+
+PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
+
+### Example
+```javascript
+var CourtApi = require('court_api');
+var defaultClient = CourtApi.ApiClient.instance;
+
+// Configure HTTP basic authorization: www-authenticate
+var www-authenticate = defaultClient.authentications['www-authenticate'];
+www-authenticate.username = 'YOUR USERNAME';
+www-authenticate.password = 'YOUR PASSWORD';
+
+var apiInstance = new CourtApi.NclApi();
+
+var searchId = "searchId_example"; // String | 
+
+var pageNo = "pageNo_example"; // String | 
+
+var opts = { 
+  'sortField': "sortField_example", // String | 
+  'sortReverse': true // Boolean | 
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getCriminalSearchResults(searchId, pageNo, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **searchId** | **String**|  | 
+ **pageNo** | **String**|  | 
+ **sortField** | **String**|  | [optional] 
+ **sortReverse** | **Boolean**|  | [optional] 
+
+### Return type
+
+[**InlineResponse200**](InlineResponse200.md)
+
+### Authorization
+
+[www-authenticate](../README.md#www-authenticate)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/xml
+
+<a name="getMDLSearchResults"></a>
+# **getMDLSearchResults**
+> InlineResponse200 getMDLSearchResults(searchId, pageNo, opts)
+
+PACER NCL MDL Case Search Result Navigation
+
+PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
+
+### Example
+```javascript
+var CourtApi = require('court_api');
+var defaultClient = CourtApi.ApiClient.instance;
+
+// Configure HTTP basic authorization: www-authenticate
+var www-authenticate = defaultClient.authentications['www-authenticate'];
+www-authenticate.username = 'YOUR USERNAME';
+www-authenticate.password = 'YOUR PASSWORD';
+
+var apiInstance = new CourtApi.NclApi();
+
+var searchId = "searchId_example"; // String | 
+
+var pageNo = "pageNo_example"; // String | 
+
+var opts = { 
+  'sortField': "sortField_example", // String | 
+  'sortReverse': true // Boolean | 
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getMDLSearchResults(searchId, pageNo, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **searchId** | **String**|  | 
+ **pageNo** | **String**|  | 
+ **sortField** | **String**|  | [optional] 
+ **sortReverse** | **Boolean**|  | [optional] 
+
+### Return type
+
+[**InlineResponse200**](InlineResponse200.md)
+
+### Authorization
+
+[www-authenticate](../README.md#www-authenticate)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/xml
+
+<a name="searchAppellateCases"></a>
+# **searchAppellateCases**
+> InlineResponse200 searchAppellateCases(opts)
 
 PACER NCL Appellate Case Search
 
@@ -56,7 +361,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.pacerNclAppellatePost(opts, callback);
+apiInstance.searchAppellateCases(opts, callback);
 ```
 
 ### Parameters
@@ -87,70 +392,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json, application/xml
 
-<a name="pacerNclAppellateSearchIdGet"></a>
-# **pacerNclAppellateSearchIdGet**
-> InlineResponse200 pacerNclAppellateSearchIdGet(searchId, pageNo, opts)
-
-PACER NCL Appellate Case Search Result Navigation
-
-PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
-
-### Example
-```javascript
-var CourtApi = require('court_api');
-var defaultClient = CourtApi.ApiClient.instance;
-
-// Configure HTTP basic authorization: www-authenticate
-var www-authenticate = defaultClient.authentications['www-authenticate'];
-www-authenticate.username = 'YOUR USERNAME';
-www-authenticate.password = 'YOUR PASSWORD';
-
-var apiInstance = new CourtApi.NclApi();
-
-var searchId = "searchId_example"; // String | 
-
-var pageNo = "pageNo_example"; // String | 
-
-var opts = { 
-  'sortField': "sortField_example", // String | 
-  'sortReverse': true // Boolean | 
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.pacerNclAppellateSearchIdGet(searchId, pageNo, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **searchId** | **String**|  | 
- **pageNo** | **String**|  | 
- **sortField** | **String**|  | [optional] 
- **sortReverse** | **Boolean**|  | [optional] 
-
-### Return type
-
-[**InlineResponse200**](InlineResponse200.md)
-
-### Authorization
-
-[www-authenticate](../README.md#www-authenticate)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, application/xml
-
-<a name="pacerNclBankruptcyPost"></a>
-# **pacerNclBankruptcyPost**
-> InlineResponse200 pacerNclBankruptcyPost(opts)
+<a name="searchBankruptcyCases"></a>
+# **searchBankruptcyCases**
+> InlineResponse200 searchBankruptcyCases(opts)
 
 PACER NCL Bankruptcy Case Search
 
@@ -194,7 +438,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.pacerNclBankruptcyPost(opts, callback);
+apiInstance.searchBankruptcyCases(opts, callback);
 ```
 
 ### Parameters
@@ -231,70 +475,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json, application/xml
 
-<a name="pacerNclBankruptcySearchIdGet"></a>
-# **pacerNclBankruptcySearchIdGet**
-> InlineResponse200 pacerNclBankruptcySearchIdGet(searchId, pageNo, opts)
-
-PACER NCL Bankruptcy Case Search Result Navigation
-
-PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
-
-### Example
-```javascript
-var CourtApi = require('court_api');
-var defaultClient = CourtApi.ApiClient.instance;
-
-// Configure HTTP basic authorization: www-authenticate
-var www-authenticate = defaultClient.authentications['www-authenticate'];
-www-authenticate.username = 'YOUR USERNAME';
-www-authenticate.password = 'YOUR PASSWORD';
-
-var apiInstance = new CourtApi.NclApi();
-
-var searchId = "searchId_example"; // String | 
-
-var pageNo = "pageNo_example"; // String | 
-
-var opts = { 
-  'sortField': "sortField_example", // String | 
-  'sortReverse': true // Boolean | 
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.pacerNclBankruptcySearchIdGet(searchId, pageNo, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **searchId** | **String**|  | 
- **pageNo** | **String**|  | 
- **sortField** | **String**|  | [optional] 
- **sortReverse** | **Boolean**|  | [optional] 
-
-### Return type
-
-[**InlineResponse200**](InlineResponse200.md)
-
-### Authorization
-
-[www-authenticate](../README.md#www-authenticate)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, application/xml
-
-<a name="pacerNclCivilPost"></a>
-# **pacerNclCivilPost**
-> InlineResponse200 pacerNclCivilPost(opts)
+<a name="searchCivilCases"></a>
+# **searchCivilCases**
+> InlineResponse200 searchCivilCases(opts)
 
 PACER NCL Civil Case Search
 
@@ -332,7 +515,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.pacerNclCivilPost(opts, callback);
+apiInstance.searchCivilCases(opts, callback);
 ```
 
 ### Parameters
@@ -363,70 +546,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json, application/xml
 
-<a name="pacerNclCivilSearchIdGet"></a>
-# **pacerNclCivilSearchIdGet**
-> InlineResponse200 pacerNclCivilSearchIdGet(searchId, pageNo, opts)
-
-PACER NCL Civil Case Search Result Navigation
-
-PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
-
-### Example
-```javascript
-var CourtApi = require('court_api');
-var defaultClient = CourtApi.ApiClient.instance;
-
-// Configure HTTP basic authorization: www-authenticate
-var www-authenticate = defaultClient.authentications['www-authenticate'];
-www-authenticate.username = 'YOUR USERNAME';
-www-authenticate.password = 'YOUR PASSWORD';
-
-var apiInstance = new CourtApi.NclApi();
-
-var searchId = "searchId_example"; // String | 
-
-var pageNo = "pageNo_example"; // String | 
-
-var opts = { 
-  'sortField': "sortField_example", // String | 
-  'sortReverse': true // Boolean | 
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.pacerNclCivilSearchIdGet(searchId, pageNo, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **searchId** | **String**|  | 
- **pageNo** | **String**|  | 
- **sortField** | **String**|  | [optional] 
- **sortReverse** | **Boolean**|  | [optional] 
-
-### Return type
-
-[**InlineResponse200**](InlineResponse200.md)
-
-### Authorization
-
-[www-authenticate](../README.md#www-authenticate)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, application/xml
-
-<a name="pacerNclCriminalPost"></a>
-# **pacerNclCriminalPost**
-> InlineResponse200 pacerNclCriminalPost(opts)
+<a name="searchCriminalCases"></a>
+# **searchCriminalCases**
+> InlineResponse200 searchCriminalCases(opts)
 
 PACER NCL Criminal Case Search
 
@@ -463,7 +585,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.pacerNclCriminalPost(opts, callback);
+apiInstance.searchCriminalCases(opts, callback);
 ```
 
 ### Parameters
@@ -493,70 +615,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json, application/xml
 
-<a name="pacerNclCriminalSearchIdGet"></a>
-# **pacerNclCriminalSearchIdGet**
-> InlineResponse200 pacerNclCriminalSearchIdGet(searchId, pageNo, opts)
-
-PACER NCL Criminal Case Search Result Navigation
-
-PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
-
-### Example
-```javascript
-var CourtApi = require('court_api');
-var defaultClient = CourtApi.ApiClient.instance;
-
-// Configure HTTP basic authorization: www-authenticate
-var www-authenticate = defaultClient.authentications['www-authenticate'];
-www-authenticate.username = 'YOUR USERNAME';
-www-authenticate.password = 'YOUR PASSWORD';
-
-var apiInstance = new CourtApi.NclApi();
-
-var searchId = "searchId_example"; // String | 
-
-var pageNo = "pageNo_example"; // String | 
-
-var opts = { 
-  'sortField': "sortField_example", // String | 
-  'sortReverse': true // Boolean | 
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.pacerNclCriminalSearchIdGet(searchId, pageNo, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **searchId** | **String**|  | 
- **pageNo** | **String**|  | 
- **sortField** | **String**|  | [optional] 
- **sortReverse** | **Boolean**|  | [optional] 
-
-### Return type
-
-[**InlineResponse200**](InlineResponse200.md)
-
-### Authorization
-
-[www-authenticate](../README.md#www-authenticate)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, application/xml
-
-<a name="pacerNclMdlPost"></a>
-# **pacerNclMdlPost**
-> InlineResponse200 pacerNclMdlPost(opts)
+<a name="searchMDLCases"></a>
+# **searchMDLCases**
+> InlineResponse200 searchMDLCases(opts)
 
 PACER NCL MDL Case Search
 
@@ -594,7 +655,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.pacerNclMdlPost(opts, callback);
+apiInstance.searchMDLCases(opts, callback);
 ```
 
 ### Parameters
@@ -623,66 +684,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/x-www-form-urlencoded
- - **Accept**: application/json, application/xml
-
-<a name="pacerNclMdlSearchIdGet"></a>
-# **pacerNclMdlSearchIdGet**
-> InlineResponse200 pacerNclMdlSearchIdGet(searchId, pageNo, opts)
-
-PACER NCL MDL Case Search Result Navigation
-
-PACER limits NCL results to about 50 cases per page. Use this endpoint to navigate search results by paging and sorting.
-
-### Example
-```javascript
-var CourtApi = require('court_api');
-var defaultClient = CourtApi.ApiClient.instance;
-
-// Configure HTTP basic authorization: www-authenticate
-var www-authenticate = defaultClient.authentications['www-authenticate'];
-www-authenticate.username = 'YOUR USERNAME';
-www-authenticate.password = 'YOUR PASSWORD';
-
-var apiInstance = new CourtApi.NclApi();
-
-var searchId = "searchId_example"; // String | 
-
-var pageNo = "pageNo_example"; // String | 
-
-var opts = { 
-  'sortField': "sortField_example", // String | 
-  'sortReverse': true // Boolean | 
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.pacerNclMdlSearchIdGet(searchId, pageNo, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **searchId** | **String**|  | 
- **pageNo** | **String**|  | 
- **sortField** | **String**|  | [optional] 
- **sortReverse** | **Boolean**|  | [optional] 
-
-### Return type
-
-[**InlineResponse200**](InlineResponse200.md)
-
-### Authorization
-
-[www-authenticate](../README.md#www-authenticate)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 

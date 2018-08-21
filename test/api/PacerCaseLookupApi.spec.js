@@ -50,30 +50,20 @@
   }
 
   describe('PacerCaseLookupApi', function() {
-    describe('bankruptcyCaseReport', function() {
-      it('should call bankruptcyCaseReport successfully', function(done) {
-        //uncomment below and update the code to test bankruptcyCaseReport
-        //instance.bankruptcyCaseReport(function(error) {
+    describe('searchBankruptcyCases', function() {
+      it('should call searchBankruptcyCases successfully', function(done) {
+        //uncomment below and update the code to test searchBankruptcyCases
+        //instance.searchBankruptcyCases(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('courtsPacerCourtCodeCasesReportCivilPost', function() {
-      it('should call courtsPacerCourtCodeCasesReportCivilPost successfully', function(done) {
-        //uncomment below and update the code to test courtsPacerCourtCodeCasesReportCivilPost
-        //instance.courtsPacerCourtCodeCasesReportCivilPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('courtsPacerCourtCodeCasesReportCriminalPost', function() {
-      it('should call courtsPacerCourtCodeCasesReportCriminalPost successfully', function(done) {
-        //uncomment below and update the code to test courtsPacerCourtCodeCasesReportCriminalPost
-        //instance.courtsPacerCourtCodeCasesReportCriminalPost(function(error) {
+    describe('searchCivilCases', function() {
+      it('should call searchCivilCases successfully', function(done) {
+        //uncomment below and update the code to test searchCivilCases
+        //instance.searchCivilCases(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -84,6 +74,16 @@
       it('should call searchCourtCases successfully', function(done) {
         //uncomment below and update the code to test searchCourtCases
         //instance.searchCourtCases(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('searchCriminalCases', function() {
+      it('should call searchCriminalCases successfully', function(done) {
+        //uncomment below and update the code to test searchCriminalCases
+        //instance.searchCriminalCases(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

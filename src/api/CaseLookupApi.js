@@ -48,8 +48,8 @@
 
 
     /**
-     * Callback function to receive the result of the casesPacerSearchCaseNoCaseNumberGet operation.
-     * @callback module:api/CaseLookupApi~casesPacerSearchCaseNoCaseNumberGetCallback
+     * Callback function to receive the result of the searchByCaseNumber operation.
+     * @callback module:api/CaseLookupApi~searchByCaseNumberCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -62,15 +62,15 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.pageSize Page Size
      * @param {Number} opts.pageNumber Page Number
-     * @param {module:api/CaseLookupApi~casesPacerSearchCaseNoCaseNumberGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CaseLookupApi~searchByCaseNumberCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.casesPacerSearchCaseNoCaseNumberGet = function(caseNumber, opts, callback) {
+    this.searchByCaseNumber = function(caseNumber, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'caseNumber' is set
       if (caseNumber === undefined || caseNumber === null) {
-        throw new Error("Missing the required parameter 'caseNumber' when calling casesPacerSearchCaseNoCaseNumberGet");
+        throw new Error("Missing the required parameter 'caseNumber' when calling searchByCaseNumber");
       }
 
 
@@ -101,8 +101,8 @@
     }
 
     /**
-     * Callback function to receive the result of the casesPacerSearchPartyTitleGet operation.
-     * @callback module:api/CaseLookupApi~casesPacerSearchPartyTitleGetCallback
+     * Callback function to receive the result of the searchByPartyTitle operation.
+     * @callback module:api/CaseLookupApi~searchByPartyTitleCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -120,20 +120,20 @@
      * @param {Number} opts.pageNumber Page Number
      * @param {String} opts.sortColumn Sort Column
      * @param {String} opts.sortOrder Sort Order
-     * @param {module:api/CaseLookupApi~casesPacerSearchPartyTitleGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CaseLookupApi~searchByPartyTitleCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.casesPacerSearchPartyTitleGet = function(_in, searchTerms, opts, callback) {
+    this.searchByPartyTitle = function(_in, searchTerms, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter '_in' is set
       if (_in === undefined || _in === null) {
-        throw new Error("Missing the required parameter '_in' when calling casesPacerSearchPartyTitleGet");
+        throw new Error("Missing the required parameter '_in' when calling searchByPartyTitle");
       }
 
       // verify the required parameter 'searchTerms' is set
       if (searchTerms === undefined || searchTerms === null) {
-        throw new Error("Missing the required parameter 'searchTerms' when calling casesPacerSearchPartyTitleGet");
+        throw new Error("Missing the required parameter 'searchTerms' when calling searchByPartyTitle");
       }
 
 

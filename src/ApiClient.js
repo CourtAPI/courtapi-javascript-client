@@ -46,9 +46,9 @@
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
-     * @default https://v1.courtapi.com
+     * @default https://train.v1.courtapi.com
      */
-    this.basePath = 'https://v1.courtapi.com'.replace(/\/+$/, '');
+    this.basePath = 'https://train.v1.courtapi.com'.replace(/\/+$/, '');
 
     /**
      * The authentication methods to be included for all API calls.

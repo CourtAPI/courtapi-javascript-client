@@ -50,130 +50,20 @@
   }
 
   describe('CaseApi', function() {
-    describe('casesPacerCourtCodeCaseNumberAliasGet', function() {
-      it('should call casesPacerCourtCodeCaseNumberAliasGet successfully', function(done) {
-        //uncomment below and update the code to test casesPacerCourtCodeCaseNumberAliasGet
-        //instance.casesPacerCourtCodeCaseNumberAliasGet(function(error) {
+    describe('getAssociatedCases', function() {
+      it('should call getAssociatedCases successfully', function(done) {
+        //uncomment below and update the code to test getAssociatedCases
+        //instance.getAssociatedCases(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('casesPacerCourtCodeCaseNumberAssociatedCasesGet', function() {
-      it('should call casesPacerCourtCodeCaseNumberAssociatedCasesGet successfully', function(done) {
-        //uncomment below and update the code to test casesPacerCourtCodeCaseNumberAssociatedCasesGet
-        //instance.casesPacerCourtCodeCaseNumberAssociatedCasesGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('casesPacerCourtCodeCaseNumberAttorneysGet', function() {
-      it('should call casesPacerCourtCodeCaseNumberAttorneysGet successfully', function(done) {
-        //uncomment below and update the code to test casesPacerCourtCodeCaseNumberAttorneysGet
-        //instance.casesPacerCourtCodeCaseNumberAttorneysGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('casesPacerCourtCodeCaseNumberCaseSummaryGet', function() {
-      it('should call casesPacerCourtCodeCaseNumberCaseSummaryGet successfully', function(done) {
-        //uncomment below and update the code to test casesPacerCourtCodeCaseNumberCaseSummaryGet
-        //instance.casesPacerCourtCodeCaseNumberCaseSummaryGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('casesPacerCourtCodeCaseNumberCreditorMailingGet', function() {
-      it('should call casesPacerCourtCodeCaseNumberCreditorMailingGet successfully', function(done) {
-        //uncomment below and update the code to test casesPacerCourtCodeCaseNumberCreditorMailingGet
-        //instance.casesPacerCourtCodeCaseNumberCreditorMailingGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('casesPacerCourtCodeCaseNumberCreditorsGet', function() {
-      it('should call casesPacerCourtCodeCaseNumberCreditorsGet successfully', function(done) {
-        //uncomment below and update the code to test casesPacerCourtCodeCaseNumberCreditorsGet
-        //instance.casesPacerCourtCodeCaseNumberCreditorsGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('casesPacerCourtCodeCaseNumberFilersGet', function() {
-      it('should call casesPacerCourtCodeCaseNumberFilersGet successfully', function(done) {
-        //uncomment below and update the code to test casesPacerCourtCodeCaseNumberFilersGet
-        //instance.casesPacerCourtCodeCaseNumberFilersGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('casesPacerCourtCodeCaseNumberMenuGet', function() {
-      it('should call casesPacerCourtCodeCaseNumberMenuGet successfully', function(done) {
-        //uncomment below and update the code to test casesPacerCourtCodeCaseNumberMenuGet
-        //instance.casesPacerCourtCodeCaseNumberMenuGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('casesPacerCourtCodeCaseNumberNoticeGet', function() {
-      it('should call casesPacerCourtCodeCaseNumberNoticeGet successfully', function(done) {
-        //uncomment below and update the code to test casesPacerCourtCodeCaseNumberNoticeGet
-        //instance.casesPacerCourtCodeCaseNumberNoticeGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('casesPacerCourtCodeCaseNumberPartiesGet', function() {
-      it('should call casesPacerCourtCodeCaseNumberPartiesGet successfully', function(done) {
-        //uncomment below and update the code to test casesPacerCourtCodeCaseNumberPartiesGet
-        //instance.casesPacerCourtCodeCaseNumberPartiesGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('casesPacerCourtCodeCaseNumberScheduleGet', function() {
-      it('should call casesPacerCourtCodeCaseNumberScheduleGet successfully', function(done) {
-        //uncomment below and update the code to test casesPacerCourtCodeCaseNumberScheduleGet
-        //instance.casesPacerCourtCodeCaseNumberScheduleGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('casesPacerCourtCodeCaseNumberStatusPendingGet', function() {
-      it('should call casesPacerCourtCodeCaseNumberStatusPendingGet successfully', function(done) {
-        //uncomment below and update the code to test casesPacerCourtCodeCaseNumberStatusPendingGet
-        //instance.casesPacerCourtCodeCaseNumberStatusPendingGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('casesPacerCourtCodeCaseNumberTrusteesGet', function() {
-      it('should call casesPacerCourtCodeCaseNumberTrusteesGet successfully', function(done) {
-        //uncomment below and update the code to test casesPacerCourtCodeCaseNumberTrusteesGet
-        //instance.casesPacerCourtCodeCaseNumberTrusteesGet(function(error) {
+    describe('getAttorneys', function() {
+      it('should call getAttorneys successfully', function(done) {
+        //uncomment below and update the code to test getAttorneys
+        //instance.getAttorneys(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -240,6 +130,26 @@
         done();
       });
     });
+    describe('getCreditorMailingMatrix', function() {
+      it('should call getCreditorMailingMatrix successfully', function(done) {
+        //uncomment below and update the code to test getCreditorMailingMatrix
+        //instance.getCreditorMailingMatrix(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getCreditors', function() {
+      it('should call getCreditors successfully', function(done) {
+        //uncomment below and update the code to test getCreditors
+        //instance.getCreditors(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getDocketDocument', function() {
       it('should call getDocketDocument successfully', function(done) {
         //uncomment below and update the code to test getDocketDocument
@@ -290,10 +200,100 @@
         done();
       });
     });
+    describe('getFilers', function() {
+      it('should call getFilers successfully', function(done) {
+        //uncomment below and update the code to test getFilers
+        //instance.getFilers(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getHeaders', function() {
       it('should call getHeaders successfully', function(done) {
         //uncomment below and update the code to test getHeaders
         //instance.getHeaders(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getMenu', function() {
+      it('should call getMenu successfully', function(done) {
+        //uncomment below and update the code to test getMenu
+        //instance.getMenu(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getNotice', function() {
+      it('should call getNotice successfully', function(done) {
+        //uncomment below and update the code to test getNotice
+        //instance.getNotice(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getParties', function() {
+      it('should call getParties successfully', function(done) {
+        //uncomment below and update the code to test getParties
+        //instance.getParties(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getPartyAliases', function() {
+      it('should call getPartyAliases successfully', function(done) {
+        //uncomment below and update the code to test getPartyAliases
+        //instance.getPartyAliases(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getPendingStatus', function() {
+      it('should call getPendingStatus successfully', function(done) {
+        //uncomment below and update the code to test getPendingStatus
+        //instance.getPendingStatus(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getSchedule', function() {
+      it('should call getSchedule successfully', function(done) {
+        //uncomment below and update the code to test getSchedule
+        //instance.getSchedule(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getSummary', function() {
+      it('should call getSummary successfully', function(done) {
+        //uncomment below and update the code to test getSummary
+        //instance.getSummary(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getTrustees', function() {
+      it('should call getTrustees successfully', function(done) {
+        //uncomment below and update the code to test getTrustees
+        //instance.getTrustees(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
